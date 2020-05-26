@@ -8,6 +8,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath></OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,5 +18,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BoogieFuelme\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="BoogieKnockKnock\View\ShoppingCategories.xaml.cs">
+      <DependentUpon>ShoppingCategories.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="BoogieKnockKnock\View\MainTabbedpage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BoogieKnockKnock\View\ShoppingCategories.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

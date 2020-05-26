@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoogieApp.BoogieKnockKnock.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,11 +11,12 @@ namespace BoogieApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ShoppingCategories();
         }
 
         protected override void OnStart()
         {
+
         }
 
         protected override void OnSleep()

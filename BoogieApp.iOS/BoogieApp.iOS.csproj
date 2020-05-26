@@ -133,4 +133,19 @@
       <Name>BoogieApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Boogielogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\business.png" />
+  </ItemGroup>
 </Project>
