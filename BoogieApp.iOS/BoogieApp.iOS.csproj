@@ -146,6 +146,9 @@
     <BundleResource Include="Resources\next.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\shapes.png" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\business.png" />
   </ItemGroup>
 </Project>

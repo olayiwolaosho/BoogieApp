@@ -11,7 +11,7 @@ namespace BoogieApp
         {
             InitializeComponent();
 
-            MainPage = new ShoppingCategories();
+            MainPage = new MainTabbedPage();
         }
 
         protected override void OnStart()

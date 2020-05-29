@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.ShoppingViews.FavouriteShopView"
+           xmlns:local="clr-namespace:BoogieApp.Images"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Boogie Wallet Balance" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+                    <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
+                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Padding="20">
+                <Label Text="Select where you want to get your grocries" HorizontalOptions="CenterAndExpand" FontFamily="RamarajaFont" FontSize="20"/>
+                <Label Text="Categories : ***" HorizontalOptions="EndAndExpand" FontFamily="RamarajaFont" FontSize="15" Padding="0,0,5,0"/>
+                <SearchBar Placeholder="Search for your prefered store..." FontFamily="RamarajaFont"/>
+            </StackLayout>
+            
+
+            <ListView Grid.Row="2" ItemsSource="{Binding favouriteShops}" SeparatorVisibility="None" RowHeight="150" Margin="25,0,25,0" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="False"  CornerRadius="20" BorderColor="LightGray" VerticalOptions="CenterAndExpand" Padding="0">
+                                <Grid Padding="20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.RowSpan="2"
+                               Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60" />
+                                    <Label Grid.Column="1" 
+                               Text="{Binding Title}" FontFamily="RamarajaFont"
+                               FontAttributes="Bold" />
+                                    <Label Grid.Row="1"
+                               Grid.Column="1" 
+                               Text="{Binding Description}"
+                               FontAttributes="Italic" 
+                               VerticalOptions="End" FontFamily="RamarajaFont"/>
+                                    <Button Text="Request Now" Grid.Column="2" Grid.RowSpan="2" BackgroundColor="#52C5FC" CornerRadius="10" Grid.Row="1" TextColor="White" HeightRequest="0" FontFamily="RamarajaFont"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

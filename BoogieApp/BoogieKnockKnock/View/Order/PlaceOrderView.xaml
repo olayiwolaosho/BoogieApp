@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.ShoppingViews.Order.PlaceOrderView"
+             xmlns:local="clr-namespace:BoogieApp.Images"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Boogie Wallet Balance" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+                    <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
+                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+            </StackLayout>
+
+            <Image Source="{local:ImageResource BoogieApp.Images.Boogielogo.png}" Grid.Row="1" HorizontalOptions="CenterAndExpand" HeightRequest="75" WidthRequest="189"/>
+            <Label Text="How do you want to place your order in ***" HorizontalOptions="CenterAndExpand" FontFamily="RamarajaFont" FontSize="20"/>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="0" Grid.Column="0">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="List Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
+                        <Label Text="Send us a list of items you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="0" Grid.Column="1">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Voice Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
+                        <Label Text="Record a voicenote telling us what you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="0">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Picture Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
+                        <Label Text="Record a voicenote telling us what you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="1">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Whatsapp Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
+                        <Label Text="Record a voicenote telling us what you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

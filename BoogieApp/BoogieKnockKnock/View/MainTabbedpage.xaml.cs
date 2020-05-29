@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoogieApp.BoogieKnockKnock.View.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,31 @@ using Xamarin.Forms.Xaml;
 namespace BoogieApp.BoogieKnockKnock.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainTabbedpage : TabbedPage
+    public partial class MainTabbedPage : TabbedPage
     {
-        public MainTabbedpage()
+        public MainTabbedPage()
         {
             InitializeComponent();
 
-            NavigationPage navigationPage = new NavigationPage(new ShoppingCategories());
-            navigationPage.IconImageSource = "business.png";
-            navigationPage.Title = "shop";
+            NavigationPage ShoppingPage = new NavigationPage(new ShoppingCategories());
+            ShoppingPage.IconImageSource = "weshop.png";
+            ShoppingPage.Title = "Shop";
+            Children.Add(ShoppingPage); 
+            
+            NavigationPage OrderPage = new NavigationPage(new ShoppingCategories());
+            OrderPage.IconImageSource = "business.png";
+            OrderPage.Title = "Order";
+            Children.Add(OrderPage); 
+            
+            NavigationPage DashboardPage = new NavigationPage(new Dashboard());
+            DashboardPage.IconImageSource = "user.png";
+            DashboardPage.Title = "Dashboard";
+            Children.Add(DashboardPage);
 
-            Children.Add(navigationPage);
+            NavigationPage ExtraPage = new NavigationPage(new ShoppingCategories());
+            ExtraPage.IconImageSource = "business.png";
+            ExtraPage.Title = "Order";
+            Children.Add(ExtraPage);
         }
     }
 }

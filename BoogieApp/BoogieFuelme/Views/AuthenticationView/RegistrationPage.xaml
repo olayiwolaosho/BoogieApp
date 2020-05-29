@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.RegistrationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="<-"/>
+            <Label Text="Create an Account"/>
+            <Label Text="Full Name"/>
+            <Entry/>
+            <Label Text="Email"/>
+            <Entry/>
+            <Label Text="Password"/>
+            <Entry/>
+            <Label Text="Phonenumber"/>
+            <Entry/>
+            <Label Text="Address"/>
+            <Entry/>
+            <Label Text="By creating an account you agree to our terms of services and privacy policy"/>
+            <Button Text="->"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

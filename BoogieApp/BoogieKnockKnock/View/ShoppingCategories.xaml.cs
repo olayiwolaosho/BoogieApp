@@ -11,13 +11,26 @@ using Xamarin.Forms.Xaml;
 namespace BoogieApp.BoogieKnockKnock.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class ShoppingCategories : ContentPage
     {
+        ShoppingCategoryViewModel SCVM => BindingContext as ShoppingCategoryViewModel; 
         public ShoppingCategories()
         {
             InitializeComponent();
 
-            BindingContext = new ShoppingCategoryViewModel();
+            BindingContext = new ShoppingCategoryViewModel(this.Navigation);
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem == null)
+            {
+                return;
+            }
+
+            SCVM.NavigatetofavShop.Execute(sender);
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

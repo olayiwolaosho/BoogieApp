@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.Home.Dashboard"
+              xmlns:local="clr-namespace:BoogieApp.Images">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Boogie Wallet Balance" FontFamily="RamarajaFont" TextColor="White" FontSize="17"/>
+                    <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
+                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+            </StackLayout>
+            <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="0" Grid.Column="0">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Edit Profile"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="0" Grid.Column="1">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Shopping Lis"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="0" Grid.Column="2">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Reward Points"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="0">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Boogie Wallet"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="1">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Boogie VIP"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="2">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Available Deleveries"/>
+                    </StackLayout>
+                </Frame> 
+                <Frame Grid.Row="1" Grid.Column="2">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Available Deleveries"/>
+                    </StackLayout>
+                </Frame> 
+                <Frame Grid.Row="1" Grid.Column="2">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Available Deleveries"/>
+                    </StackLayout>
+                </Frame> 
+                <Frame Grid.Row="1" Grid.Column="2">
+                    <StackLayout>
+                        <Image/>
+                        <Label Text="Available Deleveries"/>
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+                
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
