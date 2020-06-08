@@ -1,90 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieKnockKnock.View.Home.Dashboard"
-              xmlns:local="clr-namespace:BoogieApp.Images">
-    <ContentPage.Content>
+              xmlns:local="clr-namespace:BoogieApp.Images"
+             NavigationPage.HasNavigationBar="False"
+             Padding="0,15,0,0">
+    <ContentView.Resources>
+        
+        <ResourceDictionary>
+
+            
+            <Style TargetType="Label" x:Key="Header">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="RamarajaFont"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style> 
+            
+            <Style TargetType="Label" x:Key="PicLabel">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="FontFamily" Value="JoseBold"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            
+            <Style TargetType="Image" x:Key="myimage">
+                <Setter Property="HeightRequest" Value="90"/>
+                <Setter Property="WidthRequest" Value="40"/>
+            </Style>
+            
+            <Style TargetType="StackLayout" x:Key="mystack">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <ContentView.Content>
         <StackLayout>
 
-            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Boogie Wallet Balance" FontFamily="RamarajaFont" TextColor="White" FontSize="17"/>
-                    <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
-                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
+            <Label Text="Dashboard" TextColor="{StaticResource PrimaryColor}" FontSize="20" HorizontalOptions="CenterAndExpand" Padding="0,10" FontFamily="RamarajaFont"/>
+            <Frame BackgroundColor="#52C5FC" Padding="0" CornerRadius="10" Margin="20,0">
+                <StackLayout   Padding="10">
+                    <Label Text="Boogie Wallet Balance" Style="{StaticResource Header}"/>
+                    <Label Text="N0.00" Style="{StaticResource Header}"/>
+                    <Label Text="+Add funds" Style="{StaticResource Header}"/>
                 </StackLayout>
-                <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
-            </StackLayout>
-            <Grid>
+            </Frame>
+          
+            <Grid Padding="0,30,0,0" RowSpacing="50">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                <Frame Grid.Row="0" Grid.Column="0">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Edit Profile"/>
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Image Source="{local:ImageResource BoogieApp.Images.Profile1.png}" Style="{StaticResource myimage}"/>
+                    <Label Text="Edit Profile" Style="{StaticResource PicLabel}"/>
+                </StackLayout>
+                
+                    <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Image Source="{local:ImageResource BoogieApp.Images.SList.png}" Style="{StaticResource myimage}"/>
+                    <Label Text="Shopping List" Style="{StaticResource PicLabel}"/>
                     </StackLayout>
-                </Frame>
-                <Frame Grid.Row="0" Grid.Column="1">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Shopping Lis"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Grid.Row="0" Grid.Column="2">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Reward Points"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Grid.Row="1" Grid.Column="0">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Boogie Wallet"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Grid.Row="1" Grid.Column="1">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Boogie VIP"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Grid.Row="1" Grid.Column="2">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Available Deleveries"/>
-                    </StackLayout>
-                </Frame> 
-                <Frame Grid.Row="1" Grid.Column="2">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Available Deleveries"/>
-                    </StackLayout>
-                </Frame> 
-                <Frame Grid.Row="1" Grid.Column="2">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Available Deleveries"/>
-                    </StackLayout>
-                </Frame> 
-                <Frame Grid.Row="1" Grid.Column="2">
-                    <StackLayout>
-                        <Image/>
-                        <Label Text="Available Deleveries"/>
-                    </StackLayout>
-                </Frame>
+
+                <StackLayout Grid.Row="0" Grid.Column="2">
+                    <Image Source="{local:ImageResource BoogieApp.Images.RewardPoint.png}" Style="{StaticResource myimage}"/>
+                    <Label Text="Reward Points" Style="{StaticResource PicLabel}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <Image Source="{local:ImageResource BoogieApp.Images.BoogieWallet.png}" Style="{StaticResource myimage}"/>
+                    <Label Text="Boogie Wallet" Style="{StaticResource PicLabel}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <Image Source="{local:ImageResource BoogieApp.Images.BoogieVIP.png}" Style="{StaticResource myimage}"/>
+                    <Label Text="Boogie VIP" Style="{StaticResource PicLabel}"/>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="1" Grid.Column="2">
+                    <Image Source="{local:ImageResource BoogieApp.Images.Deleveries.png}" Style="{StaticResource myimage}"/>
+                    <Label Text="Available Deleveries" Style="{StaticResource PicLabel}"/>
+                </StackLayout>
 
             </Grid>
                 
             </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentView.Content>
+</ContentView>

@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace BoogieApp.BoogieKnockKnock.View.Home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Dashboard : ContentPage
+    public partial class Dashboard : ContentView
     {
         public Dashboard()
         {

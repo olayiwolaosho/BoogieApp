@@ -13,11 +13,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\Ramaraja-Regular.ttf" />
+    <None Remove="Fonts\JosefinSans-Bold.ttf" />
+    <None Remove="Fonts\JosefinSans-Regular.ttf" />
+    <None Remove="Fonts\JosefinSans-SemiBold.ttf" />
     <None Remove="Images\add.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\Boogielogo.png" />
+    <None Remove="Images\Boogielogo2.png" />
+    <None Remove="Images\BoogieVIP.png" />
+    <None Remove="Images\BoogieWallet.png" />
     <None Remove="Images\business.png" />
+    <None Remove="Images\checklist.png" />
+    <None Remove="Images\Deleveries.png" />
+    <None Remove="Images\Extra.png" />
     <None Remove="Images\facebook.png" />
     <None Remove="Images\facebook2x.png" />
     <None Remove="Images\facebook3x.png" />
@@ -25,34 +33,58 @@
     <None Remove="Images\gPlus2x.png" />
     <None Remove="Images\gPlus3x.png" />
     <None Remove="Images\Grocery.jpg" />
+    <None Remove="Images\myhome.png" />
     <None Remove="Images\next.png" />
+    <None Remove="Images\OrderTab.png" />
+    <None Remove="Images\Profile.png" />
+    <None Remove="Images\Profile1.png" />
+    <None Remove="Images\RewardPoint.png" />
+    <None Remove="Images\SList.png" />
     <None Remove="Images\twitter.png" />
     <None Remove="Images\twitter2x.png" />
     <None Remove="Images\twitter3x.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Fonts\Ramaraja-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-Bold.ttf" />
+    <EmbeddedResource Include="Images\Boogielogo2.png" />
+    <EmbeddedResource Include="Images\BoogieVIP.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\JosefinSans-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-SemiBold.ttf" />
     <EmbeddedResource Include="Images\add.png" />
     <EmbeddedResource Include="Images\bell.png" />
     <EmbeddedResource Include="Images\Boogielogo.png" />
+    <EmbeddedResource Include="Images\BoogieWallet.png" />
     <EmbeddedResource Include="Images\business.png" />
+    <EmbeddedResource Include="Images\checklist.png" />
+    <EmbeddedResource Include="Images\Deleveries.png" />
+    <EmbeddedResource Include="Images\Extra.png" />
     <EmbeddedResource Include="Images\facebook.png" />
     <EmbeddedResource Include="Images\facebook2x.png" />
     <EmbeddedResource Include="Images\facebook3x.png" />
     <EmbeddedResource Include="Images\gPlus.png" />
     <EmbeddedResource Include="Images\gPlus2x.png" />
     <EmbeddedResource Include="Images\gPlus3x.png" />
-    <EmbeddedResource Include="Images\Grocery.jpg" />
+    <EmbeddedResource Include="Images\myhome.png" />
     <EmbeddedResource Include="Images\next.png" />
+    <EmbeddedResource Include="Images\OrderTab.png" />
+    <EmbeddedResource Include="Images\Profile.png" />
+    <EmbeddedResource Include="Images\Profile1.png" />
+    <EmbeddedResource Include="Images\RewardPoint.png" />
+    <EmbeddedResource Include="Images\SList.png" />
     <EmbeddedResource Include="Images\twitter.png" />
     <EmbeddedResource Include="Images\twitter2x.png" />
     <EmbeddedResource Include="Images\twitter3x.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Sharpnado.Presentation.Forms" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.847" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="BoogieKnockKnock\View\ShoppingCategories.xaml.cs">
@@ -66,7 +98,19 @@
     <EmbeddedResource Update="BoogieKnockKnock\View\Home\Dashboard.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="BoogieKnockKnock\View\Home\Profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="BoogieKnockKnock\View\MainTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BoogieKnockKnock\View\Notification.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BoogieKnockKnock\View\Order\NotificationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BoogieKnockKnock\View\SharpnadoPages\Bottomtabbedpage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="BoogieKnockKnock\View\ShoppingCategories.xaml">
@@ -76,6 +120,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="BoogieKnockKnock\View\Order\PlaceOrderView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ControlViews\BottomSheet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

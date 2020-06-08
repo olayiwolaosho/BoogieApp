@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms" xmlns:tabsLayout="clr-namespace:BoogieApp.BoogieKnockKnock.View" xmlns:tabsLayout1="clr-namespace:BoogieApp.BoogieKnockKnock.View.Home"
+              xmlns:local="clr-namespace:BoogieApp.Images"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.SharpnadoPages.Bottomtabbedpage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BottomTabStyle" TargetType="tabs:BottomTabItem">
+                <Setter Property="SelectedTabColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="UnselectedLabelColor" Value="Gray" />
+                <Setter Property="UnselectedIconColor" Value="LightGray" />
+                <!--<Setter Property="FontFamily" Value="{StaticResource FontLight}" />-->
+                <Setter Property="LabelSize" Value="39" />
+                <Setter Property="IconSize" Value="26" />
+                <Setter Property="IsTextVisible" Value="True" />
+                <Setter Property="FontFamily" Value="RamarajaFont"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <tabs:ViewSwitcher x:Name="Switcher"
+                               Animate="False"
+                               SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
+                <tabsLayout:ShoppingCategories/>
+                <!--BindingContext="{Binding HomePageViewModel}"-->
+                <tabsLayout1:Dashboard />
+                <tabsLayout1:Profile  />
+                <!--<customViews:LazyView x:Name="HomeLazyView"
+                                      x:TypeArguments="tabsLayout:HomeView"
+                                      BindingContext="{Binding HomePageViewModel}" />
+                <customViews:LazyView x:TypeArguments="tabsLayout:ListView" BindingContext="{Binding ListPageViewModel}" />
+                <customViews:LazyView x:TypeArguments="tabsLayout:GridView" BindingContext="{Binding GridPageViewModel}" />
+                <Label Style="{StaticResource TextHeader}"
+                       Margin="64,0"
+                       VerticalOptions="Center"
+                       Text="HERE WE ARE! BORN TO BE KINGS, WE'RE THE PRINCES OF THE UNIVERSEEEEEEE! Well I'm a fan of Queen didn't I tell you that?" />-->
+            </tabs:ViewSwitcher>
+
+            <tabs:TabHostView x:Name="TabHost"
+                    Grid.Row="1"
+                    BackgroundColor="White"
+                    SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                    ShadowType="Top"
+                    TabType="Fixed" >
+                <tabs:TabHostView.Tabs>
+                    <tabs:BottomTabItem Style="{StaticResource BottomTabStyle}"
+                            IconImageSource="{local:ImageResource BoogieApp.Images.myhome.png}"
+                            Label="Home" />
+                    <tabs:BottomTabItem Style="{StaticResource BottomTabStyle}"
+                            IconImageSource="{local:ImageResource BoogieApp.Images.checklist.png}"
+                            Label="Dashboard" 
+                                    />
+
+                    <!--  Circle button  -->
+                    <tabs:TabButton
+                        ButtonCircleSize="75"
+                        ButtonPadding="7"
+                        IconImageSource="{local:ImageResource BoogieApp.Images.Deleveries.png}"
+                        Scale="1"
+                        TranslationY="-28"
+                        />
+
+                    <tabs:BottomTabItem Style="{StaticResource BottomTabStyle}"
+                            IconImageSource="{local:ImageResource BoogieApp.Images.Profile.png}"
+                            Label="Profile"/>
+                    <tabs:BottomTabItem Style="{StaticResource BottomTabStyle}"
+                            IconImageSource="{local:ImageResource BoogieApp.Images.Extra.png}"
+                            Label="Extra" />
+                </tabs:TabHostView.Tabs>
+            </tabs:TabHostView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,6 @@
-﻿using BoogieApp.BoogieKnockKnock.View;
+﻿using BoogieApp.BoogieFuelme.Views.AuthenticationView;
+using BoogieApp.BoogieKnockKnock.View;
+using BoogieApp.BoogieKnockKnock.View.SharpnadoPages;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,7 +13,8 @@ namespace BoogieApp
         {
             InitializeComponent();
 
-            MainPage = new MainTabbedPage();
+            MainPage = new NavigationPage(new Bottomtabbedpage());
+
         }
 
         protected override void OnStart()

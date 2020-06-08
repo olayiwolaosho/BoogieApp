@@ -12,13 +12,13 @@ namespace BoogieApp.BoogieKnockKnock.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    public partial class ShoppingCategories : ContentPage
+    public partial class ShoppingCategories : ContentView
     {
         ShoppingCategoryViewModel SCVM => BindingContext as ShoppingCategoryViewModel; 
         public ShoppingCategories()
         {
             InitializeComponent();
-
+                          
             BindingContext = new ShoppingCategoryViewModel(this.Navigation);
         }
 

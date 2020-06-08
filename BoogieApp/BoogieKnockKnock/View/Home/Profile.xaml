@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModelBase="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels.Base"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.Home.Profile"
+              viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             Padding="0,10,0,0">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            
+            
+            <Style TargetType="{x:Type Label}" x:Key="Header">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansSemiBold}"/>
+            </Style> 
+            
+            
+            <Style TargetType="{x:Type Label}" x:Key="email">
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style>
+            
+            <Style TargetType="{x:Type Label}" x:Key="GridLabel">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style> 
+            
+            <Style TargetType="{x:Type Label}" x:Key="Others">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style>
+            
+            <Style TargetType="{x:Type Button}" x:Key="Edit">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style> 
+            
+            <Style TargetType="{x:Type Button}" x:Key="Feedback">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="BorderColor" Value="LightGray" />
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style> 
+            
+            
+            
+        </ResourceDictionary>
+            
+    </ContentView.Resources>
+    
+  <ContentView.Content>
+      <StackLayout>
+          <Label Text="My Profile" Style="{StaticResource Header}"/>
+            <Image HeightRequest="120" WidthRequest="120"/>
+            <Label Text="Osho Olayiwola"  Style="{StaticResource Header}"/>
+            <Label Text="Olayiwolaosho.olinj@gmail.com" Style="{StaticResource email}"/>
+
+            <Grid Padding="5,25,5,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <Label Text="0" Style="{StaticResource GridLabel}"/>
+                    <Label Text="Total Orders" Style="{StaticResource GridLabel}"/>
+                </StackLayout> 
+                
+                <StackLayout Grid.Column="1">
+                    <Label Text="0" Style="{StaticResource GridLabel}"/>
+                    <Label Text="App Visit" Style="{StaticResource GridLabel}"/> 
+                </StackLayout>
+                
+                <StackLayout Grid.Column="2">
+                    <Label Style="{StaticResource GridLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="N"/>
+                                    <Span Text="0"/>
+                                </FormattedString.Spans> 
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="Wallet Balance" Style="{StaticResource GridLabel}"/>
+                </StackLayout> 
+                
+            </Grid>
+
+            <Grid ColumnSpacing="15" Padding="25,0,25,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Edit Profile" Grid.Column="0" Style="{StaticResource Edit}"/>
+                <Button Text="Feedback" Grid.Column="1" Style="{StaticResource Feedback}"/>
+            </Grid>
+
+            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10"/>
+
+            <Label Text="Payment Settings" Style="{StaticResource Others}"/>
+
+            <Label Text="Transaction History" Style="{StaticResource Others}"/>
+
+            <Label Text="Help &amp; Support" Style="{StaticResource Others}"/>
+
+            <Label Text="Terms of services" Style="{StaticResource Others}"/>
+
+            <Label Text="About Boogie" Style="{StaticResource Others}"/>
+
+            <Label Text="Logout" Style="{StaticResource Others}" TextColor="Red"/>
+          
+          
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

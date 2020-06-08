@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieKnockKnock.View.ShoppingCategories"
              xmlns:local="clr-namespace:BoogieApp.Images"
-             NavigationPage.HasNavigationBar="False">
-    <ContentPage.Content>
+             NavigationPage.HasNavigationBar="False"
+            Padding="0,30,0,0" >
+    <ContentView.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -15,58 +16,33 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Boogie Wallet Balance" FontFamily="RamarajaFont" TextColor="White" FontSize="17"/>
-                    <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
-                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
+            <StackLayout Padding="30,0,30,0">
+                <Image Source="{local:ImageResource BoogieApp.Images.Boogielogo2.png}" HeightRequest="75"/>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Wallet Balance" TextColor="{StaticResource PrimaryColor}"  FontAttributes="Bold"
+                           Style="{StaticResource AllTexts}" />
+                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="20" WidthRequest="28" HorizontalOptions="EndAndExpand"/>
                 </StackLayout>
-                <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+                <Label Text="N0.00" TextColor="{StaticResource PrimaryColor}" FontSize="14" FontFamily="RamarajaFont" FontAttributes="Bold" Margin="0,-10,0,0"/>
+                <Label Text="Gbagada" HorizontalOptions="EndAndExpand" FontSize="14" FontFamily="RamarajaFont" TextColor="{StaticResource PrimaryColor}"/>
             </StackLayout>
 
-            <Image Source="{local:ImageResource BoogieApp.Images.Boogielogo.png}" Grid.Row="1" HorizontalOptions="CenterAndExpand" HeightRequest="75" WidthRequest="189"/>
-            
-            
-            <ListView Grid.Row="2" ItemsSource="{Binding categoriesModels}" SeparatorVisibility="None" RowHeight="140" Margin="25,0,25,0" ItemSelected="ListView_ItemSelected">
-                <ListView.Header>
-                    <StackLayout Orientation="Horizontal" Padding="5">
-                        <Label Text="Welcome Olayiwola" FontSize="17" FontFamily="RamarajaFont"/>
-                        <Label Text=" Location Gbagada" HorizontalOptions="EndAndExpand" FontSize="17" FontFamily="RamarajaFont"/>
-                    </StackLayout>
-                </ListView.Header>
+            <Frame Grid.Row="1" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="100" CornerRadius="10" Margin="30,0" IsVisible="False">
+                <Label Text="Adverts will be placed here" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="25" VerticalOptions="CenterAndExpand" FontFamily="RamarajaFont"/>
+            </Frame>
+
+            <ListView Grid.Row="2" ItemsSource="{Binding categoriesModels}" SeparatorVisibility="None" RowHeight="115" Margin="10,10,10,0" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame HasShadow="False" CornerRadius="20" BorderColor="LightGray" VerticalOptions="CenterAndExpand">
-                                <Grid Padding="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <Image Grid.RowSpan="2"
-                               Source="{Binding ImageUrl}" 
-                               Aspect="AspectFill"
-                               HeightRequest="60" 
-                               WidthRequest="60" />
-                                    <Label Grid.Column="1" 
-                               Text="{Binding Title}" FontFamily="RamarajaFont"
-                               FontAttributes="Bold" />
-                                    <Label Grid.Row="1"
-                               Grid.Column="1" FontFamily="RamarajaFont"
-                               Text="{Binding Description}"
-                               FontAttributes="Italic" 
-                               VerticalOptions="End" />
-                                    <ImageButton Source="{local:ImageResource BoogieApp.Images.next.png}"  HeightRequest="28" WidthRequest="31" Grid.Column="2" VerticalOptions="CenterAndExpand" Grid.RowSpan="2" BackgroundColor="Transparent" Command="{Binding NavigatetofavShop}"/>
-                                </Grid>
+                            <Frame HasShadow="True"  CornerRadius="13" BorderColor="Transparent" VerticalOptions="CenterAndExpand" Padding="1" HeightRequest="90">
+                                <Image 
+                               Source="{Binding ImageUrl}" Aspect="Fill"/>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentView.Content>
+</ContentView>

@@ -3,11 +3,30 @@
     <Application.Resources>
 
         <ResourceDictionary>
-           
-            
-            <Style TargetType="Label" x:Key="Wallet Balance">
-                
+
+            <Color x:Key="PrimaryColor">#52C5FC</Color>
+
+
+            <!-- FONTS -->
+            <OnPlatform x:Key="JosefinSansRegular"
+                        x:TypeArguments="x:String">
+                <On Platform="Android,iOS" Value="JosefinSans-Regular.ttf" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="JosefinSansSemiBold"
+                        x:TypeArguments="x:String">
+                <On Platform="Android,iOS" Value="JosefinSans-SemiBold.ttf" />
+            </OnPlatform>
+
+
+            <!-- Styles -->
+            <Style TargetType="Label" x:Key="AllTexts">
+                <Setter Property="FontFamily" Value="RamarajaFont"/>
+                <Setter Property="FontSize" Value="14"/>
             </Style>
+            
+            
+            
         </ResourceDictionary>
         
         

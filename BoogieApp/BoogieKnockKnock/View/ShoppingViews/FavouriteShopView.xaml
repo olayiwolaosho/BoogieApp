@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieKnockKnock.View.ShoppingViews.FavouriteShopView"
            xmlns:local="clr-namespace:BoogieApp.Images"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             Padding="0,5,0,0">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -15,52 +16,39 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Boogie Wallet Balance" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
-                    <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
-                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
-                </StackLayout>
-                <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
+            <StackLayout Padding="5,0,5,0" Margin="5">
+                <Frame Padding="0" HeightRequest="45" CornerRadius="10" HasShadow="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Image/>
+                        <SearchBar Placeholder="Find Store"/>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="1" Padding="20">
-                <Label Text="Select where you want to get your grocries" HorizontalOptions="CenterAndExpand" FontFamily="RamarajaFont" FontSize="20"/>
-                <Label Text="Categories : ***" HorizontalOptions="EndAndExpand" FontFamily="RamarajaFont" FontSize="15" Padding="0,0,5,0"/>
-                <SearchBar Placeholder="Search for your prefered store..." FontFamily="RamarajaFont"/>
-            </StackLayout>
-            
+            <Frame Grid.Row="1" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="100" CornerRadius="10" Margin="10,0">
+                <Label Text="Adverts will be placed here" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="15" VerticalOptions="CenterAndExpand" FontFamily="RamarajaFont"/>
+            </Frame>
 
-            <ListView Grid.Row="2" ItemsSource="{Binding favouriteShops}" SeparatorVisibility="None" RowHeight="150" Margin="25,0,25,0" ItemSelected="ListView_ItemSelected">
+            <ListView Grid.Row="2" ItemsSource="{Binding favouriteShops}" SeparatorVisibility="None" RowHeight="165" Margin="10,0,10,0" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame HasShadow="False"  CornerRadius="20" BorderColor="LightGray" VerticalOptions="CenterAndExpand" Padding="0">
-                                <Grid Padding="20">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <Image Grid.RowSpan="2"
+                            <Frame  CornerRadius="20"  VerticalOptions="CenterAndExpand" Padding="0,10,0,0" HeightRequest="135">
+                                <StackLayout>
+                                    <Frame Padding="0,0,0,0" HeightRequest="150" CornerRadius="10">
+                                        <Image Grid.RowSpan="2"
                                Source="{Binding ImageUrl}" 
                                Aspect="AspectFill"
                                HeightRequest="60" 
                                WidthRequest="60" />
-                                    <Label Grid.Column="1" 
-                               Text="{Binding Title}" FontFamily="RamarajaFont"
-                               FontAttributes="Bold" />
-                                    <Label Grid.Row="1"
-                               Grid.Column="1" 
-                               Text="{Binding Description}"
-                               FontAttributes="Italic" 
-                               VerticalOptions="End" FontFamily="RamarajaFont"/>
-                                    <Button Text="Request Now" Grid.Column="2" Grid.RowSpan="2" BackgroundColor="#52C5FC" CornerRadius="10" Grid.Row="1" TextColor="White" HeightRequest="0" FontFamily="RamarajaFont"/>
-                                </Grid>
+                                    </Frame>
+                                    <StackLayout Padding="10" Orientation="Horizontal">
+                                        <Label Grid.Column="1" 
+                               Text="Get your Favourite from" FontFamily="RamarajaFont"
+                               FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" FontSize="13"/>
+                                        <Label Text="Request" Grid.Column="2" Grid.RowSpan="2" HorizontalOptions="EndAndExpand" TextColor="Green" Grid.Row="1" HeightRequest="0" FontFamily="RamarajaFont" FontSize="13"/>
+                                    </StackLayout>
+                                </StackLayout>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>

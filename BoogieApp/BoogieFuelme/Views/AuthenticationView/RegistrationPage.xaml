@@ -3,24 +3,136 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:local="clr-namespace:BoogieApp.Controls" xmlns:customControl="clr-namespace:BoogieApp.Controls.ControlViews"
              mc:Ignorable="d"
-             x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.RegistrationPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Button Text="<-"/>
-            <Label Text="Create an Account"/>
-            <Label Text="Full Name"/>
-            <Entry/>
-            <Label Text="Email"/>
-            <Entry/>
-            <Label Text="Password"/>
-            <Entry/>
-            <Label Text="Phonenumber"/>
-            <Entry/>
-            <Label Text="Address"/>
-            <Entry/>
-            <Label Text="By creating an account you agree to our terms of services and privacy policy"/>
-            <Button Text="->"/>
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.RegistrationPage"
+             BackgroundColor="#52C5FC"
+             >
+    <customControl:BottomSheet
+        PercentageHeightMainPage="1" 
+        IsBottomButtonEnable="False"
+        PercentageLockMainPageTranslation=".3"
+        PercentageHideBottomSheet=".7"
+        PercentageExpandBottomSheet=".6"
+        MinPercentageBottomSheetSwipe=".95"
+        MaxPercentageBottomSheetSwipe="-0.03"
+        CornerRadiusBottomSheet="25"
+        BackgroundBottomSheetColor="White"
+        BottomButtonText="Expand"
+        IsFrameEnabled="False"
+        x:Name="bottom">
+        <customControl:BottomSheet.ContentMainPage>
+            <StackLayout>
+                <Button Text="-"/>
+                <Label Text="Create an Account" HorizontalOptions="Center" TextColor="White"/>
+
+                <StackLayout Padding="40,0">
+                    <Label Text="Full Name" TextColor="White"/>
+                    <local:TransparentEntry Placeholder="Name"/>
+
+                    <Label Text="Email" TextColor="White"/>
+                    <local:TransparentEntry Placeholder="Name"/>
+
+                    <Label Text="Password" TextColor="White"/>
+                    <local:TransparentEntry Placeholder="Name"/>
+
+                    <Label Text="Phonenumber" TextColor="White"/>
+                    <local:TransparentEntry Placeholder="Phonenumber"/>
+
+                    <Label Text="Address" TextColor="White"/>
+                    <Frame CornerRadius="20" HeightRequest="5">
+                        <Label Text="addresss" Margin="-15" VerticalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+
+                    <Label Text="By creating an account you agree to our terms of services and privacy policy" HorizontalTextAlignment="Center" TextColor="White"/>
+                    <Button Text="->"/>
+                </StackLayout>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </customControl:BottomSheet.ContentMainPage>
+        <customControl:BottomSheet.ContentBottomSheet>
+            <StackLayout x:Name="GridFilter">
+                <SearchBar x:Name="SearchBox" BackgroundColor="Transparent" Focused="SearchBox_Focused" Placeholder="Enter an address"/>
+                <ListView VerticalOptions="FillAndExpand"
+                        BackgroundColor="Transparent"
+                        Grid.Row="2"
+                        Footer=""
+                        SelectedItem="{Binding PlaceSelected, Mode=TwoWay}"
+                        x:Name="list"
+                        ItemsSource="{Binding Places}"
+                        HasUnevenRows="true"
+                        SeparatorColor="Gray"
+                        ios:ListView.SeparatorStyle="FullWidth">
+                    <ListView.Triggers>
+                        <DataTrigger TargetType="ListView"
+                                 Binding="{Binding ShowRecentPlaces}"
+                                 Value="True">
+                            <Setter Property="ItemsSource" Value="{Binding RecentPlaces}" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="ListView"
+                                 Binding="{Binding ShowRecentPlaces}"
+                                 Value="False">
+                            <Setter Property="ItemsSource" Value="{Binding Places}" />
+                        </DataTrigger>
+                    </ListView.Triggers>
+                    <ListView.Header>
+                        <StackLayout  x:Name="recentSearchText"
+                                      IsVisible="{Binding ShowRecentPlaces}">
+                            <Label LineBreakMode="WordWrap"
+                                 FontAttributes="Bold"
+                                 Margin="20,10"
+                                 x:Name="recentSearch"
+                                 Text="History"/>
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="15"
+                                      RowSpacing="2"
+                                      ColumnSpacing="15">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="ic_location"
+                                             HeightRequest="20"
+                                             WidthRequest="20"
+                                             VerticalOptions="Start"
+                                             Grid.Row="0"
+                                             Grid.Column="0"
+                                             Grid.RowSpan="2"/>
+
+                                    <Label LineBreakMode="MiddleTruncation"
+                                               Text="{Binding StructuredFormatting.MainText}"
+                                               Grid.Row="0"
+                                               Grid.Column="1"/>
+
+                                    <Label LineBreakMode="MiddleTruncation"
+                                                 Text="{Binding StructuredFormatting.SecondaryText}" 
+                                                 TextColor="Gray" 
+                                                 Grid.Row="1"
+                                                 Grid.Column="1"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </customControl:BottomSheet.ContentBottomSheet>
+    </customControl:BottomSheet>
 </ContentPage>

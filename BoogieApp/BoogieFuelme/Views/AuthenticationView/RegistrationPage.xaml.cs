@@ -16,5 +16,29 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
         {
             InitializeComponent();
         }
+
+  
+
+        void SearchBox_Focused(object sender, FocusEventArgs e)
+        {
+            
+            MessagingCenter.Send(this, "Expand");
+            // GridFilter.IsVisible = true;
+            //  openBottomSheet();
+        }
+
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            bottom.IsFrameEnabled = true;
+            MessagingCenter.Send(this, "Expand");
+         //   bottomSheet.IsVisible = true;
+        }
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            //bottomSheet.IsVisible = false;
+        }
+
     }
 }

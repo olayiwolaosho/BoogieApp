@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieKnockKnock.View.MainTabbedPage"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-             android:TabbedPage.ToolbarPlacement="Bottom">
+             android:TabbedPage.ToolbarPlacement="Bottom"
+            >
   <!--Pages can be added as references or inline-->
 </TabbedPage>

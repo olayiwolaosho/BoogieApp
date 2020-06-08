@@ -17,25 +17,25 @@ namespace BoogieApp.BoogieKnockKnock.View
         {
             InitializeComponent();
 
-            NavigationPage ShoppingPage = new NavigationPage(new ShoppingCategories());
-            ShoppingPage.IconImageSource = "weshop.png";
-            ShoppingPage.Title = "Shop";
-            Children.Add(ShoppingPage); 
+            //NavigationPage ShoppingPage = new NavigationPage(new ShoppingCategories());
+            //ShoppingPage.IconImageSource = "weshop.png";
+            //ShoppingPage.Title = "Shop";
+            //Children.Add(ShoppingPage); 
             
-            NavigationPage OrderPage = new NavigationPage(new ShoppingCategories());
-            OrderPage.IconImageSource = "business.png";
-            OrderPage.Title = "Order";
-            Children.Add(OrderPage); 
+            //NavigationPage OrderPage = new NavigationPage(new ShoppingCategories());
+            //OrderPage.IconImageSource = "business.png";
+            //OrderPage.Title = "Order";
+            //Children.Add(OrderPage); 
             
-            NavigationPage DashboardPage = new NavigationPage(new Dashboard());
-            DashboardPage.IconImageSource = "user.png";
-            DashboardPage.Title = "Dashboard";
-            Children.Add(DashboardPage);
+            //NavigationPage DashboardPage = new NavigationPage(new Dashboard());
+            //DashboardPage.IconImageSource = "user.png";
+            //DashboardPage.Title = "Dashboard";
+            //Children.Add(DashboardPage);
 
-            NavigationPage ExtraPage = new NavigationPage(new ShoppingCategories());
-            ExtraPage.IconImageSource = "business.png";
-            ExtraPage.Title = "Order";
-            Children.Add(ExtraPage);
+            //NavigationPage ExtraPage = new NavigationPage(new ShoppingCategories());
+            //ExtraPage.IconImageSource = "shapes.png";
+            //ExtraPage.Title = "Order";
+            //Children.Add(ExtraPage);
         }
     }
 }

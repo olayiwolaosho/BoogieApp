@@ -29,7 +29,21 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels
                new ShoppingCategoriesModel()
                {
                    Title = "Grocery",
-                   ImageUrl = "Grocery.jpg",
+                   ImageUrl = "Fuel.png",
+                   Description  = "Lets help you get Groceries from your favourite supermarket"
+
+               },
+               new ShoppingCategoriesModel()
+               {
+                   Title = "Grocery",
+                   ImageUrl = "Food.jpg",
+                   Description  = "Lets help you get Groceries from your favourite supermarket"
+
+               },
+               new ShoppingCategoriesModel()
+               {
+                   Title = "Grocery",
+                   ImageUrl = "Drinks.png",
                    Description  = "Lets help you get Groceries from your favourite supermarket"
 
                },
@@ -43,31 +57,10 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels
                new ShoppingCategoriesModel()
                {
                    Title = "Grocery",
-                   ImageUrl = "Grocery.jpg",
+                   ImageUrl = "Fuel.png",
                    Description  = "Lets help you get Groceries from your favourite supermarket"
 
                },
-               new ShoppingCategoriesModel()
-               {
-                   Title = "Grocery",
-                   ImageUrl = "Grocery.jpg",
-                   Description  = "Lets help you get Groceries from your favourite supermarket"
-
-               },
-               new ShoppingCategoriesModel()
-               {
-                   Title = "Grocery",
-                   ImageUrl = "Grocery.jpg",
-                   Description  = "Lets help you get Groceries from your favourite supermarket"
-
-               },
-               new ShoppingCategoriesModel()
-               {
-                   Title = "Grocery",
-                   ImageUrl = "Grocery.jpg",
-                   Description  = "Lets help you get Groceries from your favourite supermarket"
-
-               }
            };
         }
 

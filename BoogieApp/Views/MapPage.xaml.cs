@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
 namespace BoogieApp.Views
@@ -13,6 +10,8 @@ namespace BoogieApp.Views
             InitializeComponent();
             Map map = new Map();
             Content = map;
+
+            
         }
     }
 }
