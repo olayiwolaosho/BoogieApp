@@ -17,6 +17,11 @@
                         x:TypeArguments="x:String">
                 <On Platform="Android,iOS" Value="JosefinSans-SemiBold.ttf" />
             </OnPlatform>
+            
+            <OnPlatform x:Key="JosefinSansBold"
+                        x:TypeArguments="x:String">
+                <On Platform="Android,iOS" Value="JosefinSans-Bold.ttf" />
+            </OnPlatform>
 
 
             <!-- Styles -->
@@ -24,11 +29,16 @@
                 <Setter Property="FontFamily" Value="RamarajaFont"/>
                 <Setter Property="FontSize" Value="14"/>
             </Style>
-            
-            
-            
+
+            <Style TargetType="{x:Type Label}" x:Key="DHeader">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="FontSize" Value="19" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansSemiBold}"/>
+            </Style>
+
         </ResourceDictionary>
-        
+                             
         
     </Application.Resources>
 </Application>

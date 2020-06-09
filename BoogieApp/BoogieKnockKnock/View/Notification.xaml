@@ -3,13 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModelBase="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels.Base"
              mc:Ignorable="d"
+               viewModelBase:ViewModelLocator.AutoWireViewModel="true"
              x:Class="BoogieApp.BoogieKnockKnock.View.Notification">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Notification" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout>
+                <ListView Grid.Row="2" ItemsSource="{Binding categoriesModels}" SeparatorVisibility="None" RowHeight="115" Margin="10,10,10,0" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame HasShadow="True"  CornerRadius="13" BorderColor="Transparent" VerticalOptions="CenterAndExpand" Padding="1" HeightRequest="90">
+                                    <Image 
+                               Source="{Binding ImageUrl}" Aspect="Fill"/>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

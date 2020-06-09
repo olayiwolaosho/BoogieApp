@@ -50,7 +50,7 @@
                 </StackLayout>
             </Frame>
           
-            <Grid Padding="0,30,0,0" RowSpacing="50">
+            <Grid Padding="0,30,0,0" RowSpacing="25">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:VM="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels"
+                xmlns:converters="clr-namespace:BoogieApp.Converters"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.Order.ViewOrder"
+              xmlns:local="clr-namespace:BoogieApp.Images"
+             NavigationPage.HasNavigationBar="False"
+             Padding="0,15,0,0">
+
+    <ContentPage.BindingContext>
+        <VM:ViewOrderViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstOrderConverter x:Key="FirstOrderConverter" />
+            <converters:SecondOrderConverter x:Key="SecondOrderConverter" />
+            <converters:OrderVisibilityConverter x:Key="OrderVisibilityConverter" />
+            <converters:ProgressColorConverter x:Key="ProgressColorConverter"/>
+            <converters:ViewCellHeightConverter x:Key="ViewCellHeightConverter"/> 
+
+            <Color x:Key="ordercolor">#666666</Color>
+
+            <Style TargetType="{x:Type Label}" x:Key="progress">
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansBold}"/>
+            </Style> 
+            
+            <Style TargetType="{x:Type Label}" x:Key="time">
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+                <Setter Property="TextColor" Value="{StaticResource ordercolor}"/>
+            </Style> 
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Order List" Style="{StaticResource DHeader}" FontSize="20"/>
+            <ListView ItemsSource="{Binding order}" SeparatorVisibility="None" Margin="15,0,10,15" HasUnevenRows="True" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame  CornerRadius="20" VerticalOptions="Center" Padding="10,10,0,10" HeightRequest="{Binding Shopname, Converter={StaticResource ViewCellHeightConverter}}" Margin="3,8">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image 
+                               Source="{local:ImageResource BoogieApp.Images.box.png}"
+                               HeightRequest="10" 
+                               WidthRequest="10" />
+                                        <StackLayout HorizontalOptions="FillAndExpand">
+                                            <Label 
+                               Text="{Binding Shopname, Converter={StaticResource FirstOrderConverter}}" FontFamily="RamarajaFont"
+                               FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" FontSize="15"/>
+                                            <Label Text="{Binding orders, Converter={StaticResource FirstOrderConverter}}" TextColor="{StaticResource ordercolor}"  FontFamily="RamarajaFont" FontSize="13" />
+                                            <BoxView BackgroundColor="LightGray" HeightRequest="1" IsVisible="{Binding Shopname, Converter={StaticResource OrderVisibilityConverter}}"/>
+                                        </StackLayout>
+                                        
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" IsVisible="{Binding Shopname, Converter={StaticResource OrderVisibilityConverter}}">
+                                        <Image 
+                                Source="{local:ImageResource BoogieApp.Images.box.png}" 
+                               HeightRequest="10" 
+                               WidthRequest="10" />
+                                        <StackLayout >
+                                            <Label 
+                               Text="{Binding Shopname, Converter={StaticResource SecondOrderConverter}}" FontFamily="RamarajaFont"
+                               FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" FontSize="15"/>
+                                            <Label Text="{Binding orders, Converter={StaticResource SecondOrderConverter}}" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ordercolor}" FontFamily="RamarajaFont" FontSize="13"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
+                                        <Label Text="{Binding orderprogress}" HorizontalOptions="StartAndExpand" Style="{StaticResource progress}" TextColor="{Binding orderprogress, Converter={StaticResource ProgressColorConverter}}"/>
+                                        <Label Text="{Binding Date}" Style="{StaticResource time}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

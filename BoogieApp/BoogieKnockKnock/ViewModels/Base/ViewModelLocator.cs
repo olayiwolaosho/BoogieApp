@@ -15,8 +15,13 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels.Base
          static ViewModelLocator()
         {
             _container = new TinyIoCContainer();
+
+
             // View models - by default, TinyIoC will register concrete classes as multi-instance.
             _container.Register<ProfileViewModel>();
+            _container.Register<NotificationViewModel>();
+            _container.Register<ProfileViewModel>();
+           
         }
 
         public static readonly BindableProperty AutoWireViewModelProperty =

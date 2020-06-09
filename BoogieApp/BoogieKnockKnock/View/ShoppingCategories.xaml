@@ -7,7 +7,7 @@
              x:Class="BoogieApp.BoogieKnockKnock.View.ShoppingCategories"
              xmlns:local="clr-namespace:BoogieApp.Images"
              NavigationPage.HasNavigationBar="False"
-            Padding="0,30,0,0" >
+            Padding="0,20,0,0" >
     <ContentView.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -16,15 +16,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <StackLayout Padding="30,0,30,0">
-                <Image Source="{local:ImageResource BoogieApp.Images.Boogielogo2.png}" HeightRequest="75"/>
+            <StackLayout Padding="0,0,15,0">
+                <ImageButton BackgroundColor="Transparent" Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="20" WidthRequest="28" HorizontalOptions="EndAndExpand" Command="{Binding NavigateNotification}"/>
+                <Image Source="{local:ImageResource BoogieApp.Images.Boogielogo2.png}" HeightRequest="70" Margin="30,-20,0,0"  HorizontalOptions="Center"/>
                 <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Label Text="Wallet Balance" TextColor="{StaticResource PrimaryColor}"  FontAttributes="Bold"
-                           Style="{StaticResource AllTexts}" />
-                    <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="20" WidthRequest="28" HorizontalOptions="EndAndExpand"/>
+                    <!--<Label Text="Wallet Balance" TextColor="{StaticResource PrimaryColor}"  FontAttributes="Bold"
+                           Style="{StaticResource AllTexts}" />-->
+                    <Label Text="Gbagada" HorizontalOptions="EndAndExpand" FontSize="14" FontFamily="RamarajaFont" TextColor="{StaticResource PrimaryColor}"/>
                 </StackLayout>
-                <Label Text="N0.00" TextColor="{StaticResource PrimaryColor}" FontSize="14" FontFamily="RamarajaFont" FontAttributes="Bold" Margin="0,-10,0,0"/>
-                <Label Text="Gbagada" HorizontalOptions="EndAndExpand" FontSize="14" FontFamily="RamarajaFont" TextColor="{StaticResource PrimaryColor}"/>
+                <!--<Label Text="N0.00" TextColor="{StaticResource PrimaryColor}" FontSize="14" FontFamily="RamarajaFont" FontAttributes="Bold" Margin="0,-10,0,0"/>-->
+               
             </StackLayout>
 
             <Frame Grid.Row="1" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="100" CornerRadius="10" Margin="30,0" IsVisible="False">

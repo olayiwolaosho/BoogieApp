@@ -1,18 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
 using Android.Content;
-using Android.Content.Res;
 using Android.Graphics.Drawables;
-using Android.Text;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
 using BoogieApp.Droid.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using Xamarin.Forms.PlatformConfiguration;
 
-[assembly: ExportRenderer(typeof(BoogieApp.Controls.TransparentEntry), typeof(TransparentEntryRender))]
+[assembly: ExportRenderer(typeof(BoogieApp.Controls.BorderlessEntry), typeof(BorderlessEntryRenderer))]
 namespace BoogieApp.Droid.Controls
 {
-    public class TransparentEntryRender : EntryRenderer
+    class BorderlessEntryRenderer : EntryRenderer
     {
-        public TransparentEntryRender(Context context) : base(context)
+        public BorderlessEntryRenderer(Context context) : base(context)
         {
 
         }
@@ -27,9 +35,9 @@ namespace BoogieApp.Droid.Controls
                 {
                     //Control.SetBackgroundResource(Resource.Layout.rounded_shape);
                     var gradientDrawable = new GradientDrawable();
-                    gradientDrawable.SetCornerRadius(60f);
-                   // gradientDrawable.SetStroke(5, Android.Graphics.Color.DeepPink);
-                    gradientDrawable.SetColor(Android.Graphics.Color.LightGray);
+                    gradientDrawable.SetCornerRadius(10f);
+                    // gradientDrawable.SetStroke(5, Android.Graphics.Color.DeepPink);
+                    gradientDrawable.SetColor(Android.Graphics.Color.Rgb(250, 250, 250));
                     Control.SetBackground(gradientDrawable);
 
                     Control.SetPadding(50, Control.PaddingTop, Control.PaddingRight,

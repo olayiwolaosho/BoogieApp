@@ -1,7 +1,10 @@
-﻿using BoogieApp.BoogieKnockKnock.ViewModels.Base;
+﻿using BoogieApp.BoogieKnockKnock.View.Order;
+using BoogieApp.BoogieKnockKnock.ViewModels.Base;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace BoogieApp.BoogieKnockKnock.ViewModels.SharpnadoViewModel
 {
@@ -19,5 +22,11 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels.SharpnadoViewModel
                 RaisePropertyChanged(() => SelectedViewModelIndex);
             }
         }
+
+        public ICommand NavtoOrder => new Command(async () =>
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new ViewOrder());
+        });
+       
     }
 }

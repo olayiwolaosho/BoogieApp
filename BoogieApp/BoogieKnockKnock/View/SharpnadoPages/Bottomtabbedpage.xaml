@@ -70,6 +70,7 @@
                         IconImageSource="{local:ImageResource BoogieApp.Images.Deleveries.png}"
                         Scale="1"
                         TranslationY="-28"
+                        TapCommand="{Binding NavtoOrder}"
                         />
 
                     <tabs:BottomTabItem Style="{StaticResource BottomTabStyle}"

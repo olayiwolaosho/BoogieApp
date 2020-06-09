@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:VM="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.Order.OrderDetail"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <VM:ViewOrderViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Frame}" x:Key="myframe">
+                <Setter Property="CornerRadius" Value="20"/>
+            </Style>
+            
+            <Style TargetType="{x:Type Label}" x:Key="bluelabel">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="Padding" Value="8"/>
+            </Style>
+            
+            <Style TargetType="{x:Type Label}" x:Key="payment">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style>
+
+            <Style TargetType="{x:Type Button}" x:Key="currentbutton">
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansBold}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="15"/>
+            </Style>
+
+            <Style TargetType="{x:Type Label}" x:Key="money">
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Frame Style="{StaticResource myframe}" Margin="10" HasShadow="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Your Order Details" Style="{StaticResource DHeader}" />
+                <ListView SeparatorVisibility="None" Margin="15,0,10,15" HasUnevenRows="True" Grid.Row="1" ItemsSource="{Binding vieworder}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Style="{StaticResource myframe}" Margin="15" BorderColor="#F6F6F6">
+                                    <Expander>
+                                        <Expander.Header>
+                                            <Label Text="D'Prince Mini Market"
+               Style="{StaticResource DHeader}"/>
+                                        </Expander.Header>
+                                        <Grid Padding="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Label Text="Items" Style="{StaticResource DHeader}"/>
+                                            <Label Grid.Column="1"
+               Text="Quantity" HorizontalOptions="Center" Style="{StaticResource DHeader}"/> 
+                                            <Label Grid.Column="2"
+               Text="Brand" Style="{StaticResource DHeader}"/>
+                                            <StackLayout Grid.ColumnSpan="3" Orientation="Horizontal" Grid.Row="2">
+                                                <StackLayout HorizontalOptions="StartAndExpand">
+                                                    <Label Text="Item Amount" Style="{StaticResource DHeader}" FontSize="14"/>
+                                                    <Label Text="N2,900.00" Style="{StaticResource payment}"/>
+                                                    
+                                                </StackLayout> 
+                                                <StackLayout>
+                                                    <Label Text="Order On" Style="{StaticResource DHeader}" FontSize="10"/>
+                                                    <Label Text="2-June-2020" Style="{StaticResource payment}"/>
+                                                    
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </Grid>
+                                       
+                                    </Expander>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout Grid.Row="2">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Shoppers Charge" Style="{StaticResource payment}"/>
+                        <Label Text="N300.00" Style="{StaticResource money}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Delivery Fee" Style="{StaticResource payment}"/>
+                        <Label Text="N500.00" Style="{StaticResource money}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total" Style="{StaticResource payment}"/>
+                        <Label Text="" Style="{StaticResource money}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Payment Method" Style="{StaticResource bluelabel}"/>
+                        <Label Text="Change" Style="{StaticResource money}" BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="Center" Padding="4" TextColor="White"/>
+                    </StackLayout>
+                    <Label Text="Payment On Delivery" Style="{StaticResource payment}" FontSize="17"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Delivery Address" Style="{StaticResource bluelabel}"/>
+                        <Label Text="Change" Style="{StaticResource money}" BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="Center" Padding="4" TextColor="White"/>
+                    </StackLayout>
+                    <Label Text="64, Shobamu lane New Garage Bustop" Style="{StaticResource payment}"/>
+                    <Label Text="Gbagada" Style="{StaticResource payment}"/>
+                    <Label Text="Lagos" Style="{StaticResource payment}"/>
+                    <Button Text="Accept Order" Style="{StaticResource currentbutton}"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

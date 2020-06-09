@@ -12,7 +12,7 @@ namespace BoogieApp
         public App()
         {
             InitializeComponent();
-
+            Device.SetFlags(new string[] { "Expander_Experimental" });
             MainPage = new NavigationPage(new Bottomtabbedpage());
 
         }

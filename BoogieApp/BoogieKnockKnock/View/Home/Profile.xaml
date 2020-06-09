@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModelBase="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels.Base"
+             xmlns:viewModelBase="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels.Base" xmlns:VM="clr-namespace:BoogieApp.BoogieKnockKnock.ViewModels"
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieKnockKnock.View.Home.Profile"
               viewModelBase:ViewModelLocator.AutoWireViewModel="true"
              Padding="0,10,0,0">
 
+    <ContentView.BindingContext>
+        <VM:ProfileViewModel/>
+    </ContentView.BindingContext>
+        
     <ContentView.Resources>
         <ResourceDictionary>
             
@@ -67,11 +71,11 @@
   <ContentView.Content>
       <StackLayout>
           <Label Text="My Profile" Style="{StaticResource Header}"/>
-            <Image HeightRequest="120" WidthRequest="120"/>
+            <Image HeightRequest="110" WidthRequest="110"/>
             <Label Text="Osho Olayiwola"  Style="{StaticResource Header}"/>
             <Label Text="Olayiwolaosho.olinj@gmail.com" Style="{StaticResource email}"/>
 
-            <Grid Padding="5,25,5,20">
+            <Grid Padding="5,15,5,20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -114,9 +118,13 @@
                 <Button Text="Feedback" Grid.Column="1" Style="{StaticResource Feedback}"/>
             </Grid>
 
-            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10"/>
+            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,5"/>
 
-            <Label Text="Payment Settings" Style="{StaticResource Others}"/>
+            <Label Text="Payment Settings" Style="{StaticResource Others}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SelectPaymentMethod}"/>
+                </Label.GestureRecognizers>
+            </Label>
 
             <Label Text="Transaction History" Style="{StaticResource Others}"/>
 

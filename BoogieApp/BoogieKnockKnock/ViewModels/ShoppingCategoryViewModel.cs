@@ -1,4 +1,5 @@
 ﻿using BoogieApp.BoogieKnockKnock.Models;
+using BoogieApp.BoogieKnockKnock.View.Order;
 using BoogieApp.BoogieKnockKnock.View.ShoppingViews;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,11 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels
         public ICommand NavigatetofavShop => new Command(async () =>
         {
             await navigation.PushAsync(new FavouriteShopView());
+        });  
+        
+        public ICommand NavigateNotification => new Command(async () =>
+        {
+            await navigation.PushAsync(new NotificationView());
         });
 
     }
