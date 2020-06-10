@@ -13659,7 +13659,7 @@ namespace BoogieApp.Droid
 			public const int bottom_shadow = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int business = 2131165277;
+			public const int design_fab_background = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
 			public const int common_full_open_on_phone = 2131165278;
@@ -14041,13 +14041,13 @@ namespace BoogieApp.Droid
 			public const int end = 2131230790;
 			
 			// aapt resource value: 0x7F080047
-			public const int end_padder = 2131230791;
-			
-			// aapt resource value: 0x7F080048
-			public const int enterAlways = 2131230792;
+			public const int exitUntilCollapsed = 2131230791;
 			
 			// aapt resource value: 0x7F080049
-			public const int enterAlwaysCollapsed = 2131230793;
+			public const int expanded_menu = 2131230793;
+			
+			// aapt resource value: 0x7F080048
+			public const int expand_activities_button = 2131230792;
 			
 			// aapt resource value: 0x7F08004A
 			public const int exitUntilCollapsed = 2131230794;
