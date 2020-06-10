@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BoogieApp.Views.LoginPage"
-             xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             BackgroundColor="DodgerBlue">
+             xmlns:local="clr-namespace:BoogieApp.Controls"
+             BackgroundColor="#52C5FC"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Label HorizontalOptions="Center"
@@ -12,28 +13,34 @@
                    FontFamily="MyAwesomeCustomFont"
                    FontSize="30" />
 
-            <Entry Placeholder="Enter Your Email"
-                   PlaceholderColor="White"
+    <StackLayout Spacing="30" Padding="30">
+        <local:TransparentEntry Placeholder="Enter Your Email"
+                   PlaceholderColor="Gray"
                    Keyboard="Email"
                    FontFamily="MyAwesomeCustomFont"
                    FontSize="20"
-                   HorizontalOptions="CenterAndExpand"
-                   WidthRequest="350"
-                   HeightRequest="60"/>
+                   HeightRequest="55"
+                   Text="{Binding Email}"
+                                        />
+           
 
-            <Entry Placeholder="Enter Your Password"
-                   PlaceholderColor="White"
+      
+                <local:TransparentEntry Placeholder="Enter Your Password"
+                   PlaceholderColor="Gray"
                    IsPassword="True"
                    FontFamily="MyAwesomeCustomFont"
                    FontSize="20"
-                   HorizontalOptions="CenterAndExpand"
-                   WidthRequest="350"
-                   HeightRequest="60"/>
+                   HeightRequest="55"
+                   Text="{Binding Password}"  Margin="-2"  />
+           
+    </StackLayout>
+                
 
-            <Button Text="CONTINUE"
+            <Button x:Name="LoginButton"
+                    Text="CONTINUE"
                     FontFamily="MyAwesomeCustomFont"
                     FontSize="20"
-                    BackgroundColor="DodgerBlue"
+                    BackgroundColor="#52C5FC"
                     TextColor="White"
                     BorderWidth="3"
                     BorderRadius="20"
@@ -41,7 +48,8 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="350"
                     HeightRequest="60"
-                    Margin="20"/>
+                    Margin="20"
+                    Clicked="LoginButton_Clicked"/>
 
             <Label Text="Forget Password?"
                    HorizontalTextAlignment="Center"
@@ -59,6 +67,14 @@
                 <Image Source="twitter.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>
                 <Image Source="gPlus.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>
             </StackLayout>
+
+            <Label HorizontalOptions="Center"
+                   Text="Do you have an Account? Register Here"
+                   TextColor="White">
+                <Label.GestureRecognizers>
+                    <ClickGestureRecognizer Clicked="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+                </Label>
         </StackLayout>   
     </ContentPage.Content>
 </ContentPage>
