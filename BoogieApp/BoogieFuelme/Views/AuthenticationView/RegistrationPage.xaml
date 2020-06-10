@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.RegistrationPage"
              BackgroundColor="#52C5FC"
-             >
+             NavigationPage.HasNavigationBar="False">
     <customControl:BottomSheet
         PercentageHeightMainPage="1" 
         IsBottomButtonEnable="False"
