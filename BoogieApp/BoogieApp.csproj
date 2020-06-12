@@ -17,6 +17,7 @@
     <None Remove="Fonts\JosefinSans-Regular.ttf" />
     <None Remove="Fonts\JosefinSans-SemiBold.ttf" />
     <None Remove="Images\add.png" />
+    <None Remove="Images\back.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\Boogielogo.png" />
     <None Remove="Images\Boogielogo2.png" />
@@ -38,6 +39,7 @@
     <None Remove="Images\myhome.png" />
     <None Remove="Images\next.png" />
     <None Remove="Images\OrderTab.png" />
+    <None Remove="Images\pin.png" />
     <None Remove="Images\Profile.png" />
     <None Remove="Images\Profile1.png" />
     <None Remove="Images\RewardPoint.png" />
@@ -49,6 +51,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Fonts\JosefinSans-Bold.ttf" />
+    <EmbeddedResource Include="Images\back.png" />
     <EmbeddedResource Include="Images\Boogielogo2.png" />
     <EmbeddedResource Include="Images\BoogieVIP.png" />
   </ItemGroup>
@@ -75,6 +78,7 @@
     <EmbeddedResource Include="Images\myhome.png" />
     <EmbeddedResource Include="Images\next.png" />
     <EmbeddedResource Include="Images\OrderTab.png" />
+    <EmbeddedResource Include="Images\pin.png" />
     <EmbeddedResource Include="Images\Profile.png" />
     <EmbeddedResource Include="Images\Profile1.png" />
     <EmbeddedResource Include="Images\RewardPoint.png" />
@@ -85,6 +89,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Sharpnado.Presentation.Forms" Version="1.6.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />

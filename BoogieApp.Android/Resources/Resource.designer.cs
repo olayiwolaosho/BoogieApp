@@ -26,6 +26,188 @@ namespace BoogieApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Permissions.Resource.Attribute.alpha = global::BoogieApp.Droid.Resource.Attribute.alpha;
+			global::Plugin.Permissions.Resource.Attribute.coordinatorLayoutStyle = global::BoogieApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.Permissions.Resource.Attribute.font = global::BoogieApp.Droid.Resource.Attribute.font;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderAuthority = global::BoogieApp.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderCerts = global::BoogieApp.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchStrategy = global::BoogieApp.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchTimeout = global::BoogieApp.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderPackage = global::BoogieApp.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderQuery = global::BoogieApp.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Permissions.Resource.Attribute.fontStyle = global::BoogieApp.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.Permissions.Resource.Attribute.fontVariationSettings = global::BoogieApp.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Permissions.Resource.Attribute.fontWeight = global::BoogieApp.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.Permissions.Resource.Attribute.keylines = global::BoogieApp.Droid.Resource.Attribute.keylines;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchor = global::BoogieApp.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchorGravity = global::BoogieApp.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Attribute.layout_behavior = global::BoogieApp.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Permissions.Resource.Attribute.layout_dodgeInsetEdges = global::BoogieApp.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Attribute.layout_insetEdge = global::BoogieApp.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Permissions.Resource.Attribute.layout_keyline = global::BoogieApp.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Permissions.Resource.Attribute.statusBarBackground = global::BoogieApp.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Permissions.Resource.Attribute.ttcIndex = global::BoogieApp.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.Permissions.Resource.Color.browser_actions_bg_grey = global::BoogieApp.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Permissions.Resource.Color.browser_actions_divider_color = global::BoogieApp.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_text_color = global::BoogieApp.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_title_color = global::BoogieApp.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.Permissions.Resource.Color.notification_action_color_filter = global::BoogieApp.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Permissions.Resource.Color.notification_icon_bg_color = global::BoogieApp.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Permissions.Resource.Color.ripple_material_light = global::BoogieApp.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Permissions.Resource.Color.secondary_text_default_material_light = global::BoogieApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_max_width = global::BoogieApp.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_min_padding = global::BoogieApp.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_horizontal_material = global::BoogieApp.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_vertical_material = global::BoogieApp.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_horizontal_material = global::BoogieApp.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_vertical_material = global::BoogieApp.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_control_corner_material = global::BoogieApp.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_height = global::BoogieApp.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_width = global::BoogieApp.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_icon_size = global::BoogieApp.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_text_size = global::BoogieApp.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_big_circle_margin = global::BoogieApp.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_content_margin_start = global::BoogieApp.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_height = global::BoogieApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_width = global::BoogieApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_main_column_padding_top = global::BoogieApp.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_media_narrow_margin = global::BoogieApp.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_icon_size = global::BoogieApp.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_side_padding_top = global::BoogieApp.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_background_padding = global::BoogieApp.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_size_as_large = global::BoogieApp.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Permissions.Resource.Dimension.notification_subtext_size = global::BoogieApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad = global::BoogieApp.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad_large_text = global::BoogieApp.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Permissions.Resource.Drawable.notification_action_background = global::BoogieApp.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg = global::BoogieApp.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low = global::BoogieApp.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_normal = global::BoogieApp.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_pressed = global::BoogieApp.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal = global::BoogieApp.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal_pressed = global::BoogieApp.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_icon_background = global::BoogieApp.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_bg = global::BoogieApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_low_bg = global::BoogieApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_tile_bg = global::BoogieApp.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Permissions.Resource.Drawable.notify_panel_notification_icon_bg = global::BoogieApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Permissions.Resource.Id.actions = global::BoogieApp.Droid.Resource.Id.actions;
+			global::Plugin.Permissions.Resource.Id.action_container = global::BoogieApp.Droid.Resource.Id.action_container;
+			global::Plugin.Permissions.Resource.Id.action_divider = global::BoogieApp.Droid.Resource.Id.action_divider;
+			global::Plugin.Permissions.Resource.Id.action_image = global::BoogieApp.Droid.Resource.Id.action_image;
+			global::Plugin.Permissions.Resource.Id.action_text = global::BoogieApp.Droid.Resource.Id.action_text;
+			global::Plugin.Permissions.Resource.Id.all = global::BoogieApp.Droid.Resource.Id.all;
+			global::Plugin.Permissions.Resource.Id.async = global::BoogieApp.Droid.Resource.Id.async;
+			global::Plugin.Permissions.Resource.Id.blocking = global::BoogieApp.Droid.Resource.Id.blocking;
+			global::Plugin.Permissions.Resource.Id.bottom = global::BoogieApp.Droid.Resource.Id.bottom;
+			global::Plugin.Permissions.Resource.Id.browser_actions_header_text = global::BoogieApp.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_items = global::BoogieApp.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_icon = global::BoogieApp.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_text = global::BoogieApp.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_view = global::BoogieApp.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Permissions.Resource.Id.center = global::BoogieApp.Droid.Resource.Id.center;
+			global::Plugin.Permissions.Resource.Id.center_horizontal = global::BoogieApp.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Permissions.Resource.Id.center_vertical = global::BoogieApp.Droid.Resource.Id.center_vertical;
+			global::Plugin.Permissions.Resource.Id.chronometer = global::BoogieApp.Droid.Resource.Id.chronometer;
+			global::Plugin.Permissions.Resource.Id.clip_horizontal = global::BoogieApp.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Permissions.Resource.Id.clip_vertical = global::BoogieApp.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Permissions.Resource.Id.end = global::BoogieApp.Droid.Resource.Id.end;
+			global::Plugin.Permissions.Resource.Id.fill = global::BoogieApp.Droid.Resource.Id.fill;
+			global::Plugin.Permissions.Resource.Id.fill_horizontal = global::BoogieApp.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Permissions.Resource.Id.fill_vertical = global::BoogieApp.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Permissions.Resource.Id.forever = global::BoogieApp.Droid.Resource.Id.forever;
+			global::Plugin.Permissions.Resource.Id.icon = global::BoogieApp.Droid.Resource.Id.icon;
+			global::Plugin.Permissions.Resource.Id.icon_group = global::BoogieApp.Droid.Resource.Id.icon_group;
+			global::Plugin.Permissions.Resource.Id.info = global::BoogieApp.Droid.Resource.Id.info;
+			global::Plugin.Permissions.Resource.Id.italic = global::BoogieApp.Droid.Resource.Id.italic;
+			global::Plugin.Permissions.Resource.Id.left = global::BoogieApp.Droid.Resource.Id.left;
+			global::Plugin.Permissions.Resource.Id.line1 = global::BoogieApp.Droid.Resource.Id.line1;
+			global::Plugin.Permissions.Resource.Id.line3 = global::BoogieApp.Droid.Resource.Id.line3;
+			global::Plugin.Permissions.Resource.Id.none = global::BoogieApp.Droid.Resource.Id.none;
+			global::Plugin.Permissions.Resource.Id.normal = global::BoogieApp.Droid.Resource.Id.normal;
+			global::Plugin.Permissions.Resource.Id.notification_background = global::BoogieApp.Droid.Resource.Id.notification_background;
+			global::Plugin.Permissions.Resource.Id.notification_main_column = global::BoogieApp.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Permissions.Resource.Id.notification_main_column_container = global::BoogieApp.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Permissions.Resource.Id.right = global::BoogieApp.Droid.Resource.Id.right;
+			global::Plugin.Permissions.Resource.Id.right_icon = global::BoogieApp.Droid.Resource.Id.right_icon;
+			global::Plugin.Permissions.Resource.Id.right_side = global::BoogieApp.Droid.Resource.Id.right_side;
+			global::Plugin.Permissions.Resource.Id.start = global::BoogieApp.Droid.Resource.Id.start;
+			global::Plugin.Permissions.Resource.Id.tag_transition_group = global::BoogieApp.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_event_manager = global::BoogieApp.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_listeners = global::BoogieApp.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Permissions.Resource.Id.text = global::BoogieApp.Droid.Resource.Id.text;
+			global::Plugin.Permissions.Resource.Id.text2 = global::BoogieApp.Droid.Resource.Id.text2;
+			global::Plugin.Permissions.Resource.Id.time = global::BoogieApp.Droid.Resource.Id.time;
+			global::Plugin.Permissions.Resource.Id.title = global::BoogieApp.Droid.Resource.Id.title;
+			global::Plugin.Permissions.Resource.Id.top = global::BoogieApp.Droid.Resource.Id.top;
+			global::Plugin.Permissions.Resource.Integer.status_bar_notification_info_maxnum = global::BoogieApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_page = global::BoogieApp.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_row = global::BoogieApp.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Permissions.Resource.Layout.notification_action = global::BoogieApp.Droid.Resource.Layout.notification_action;
+			global::Plugin.Permissions.Resource.Layout.notification_action_tombstone = global::BoogieApp.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Permissions.Resource.Layout.notification_template_custom_big = global::BoogieApp.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Permissions.Resource.Layout.notification_template_icon_group = global::BoogieApp.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_chronometer = global::BoogieApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_time = global::BoogieApp.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Permissions.Resource.String.status_bar_notification_info_overflow = global::BoogieApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification = global::BoogieApp.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Info = global::BoogieApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::BoogieApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Time = global::BoogieApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Title = global::BoogieApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionContainer = global::BoogieApp.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionText = global::BoogieApp.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Permissions.Resource.Style.Widget_Support_CoordinatorLayout = global::BoogieApp.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem = global::BoogieApp.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_alpha = global::BoogieApp.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_alpha = global::BoogieApp.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_color = global::BoogieApp.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_keylines = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::BoogieApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily = global::BoogieApp.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_font = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontStyle = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontWeight = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_font = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontStyle = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontWeight = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_ttcIndex = global::BoogieApp.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderAuthority = global::BoogieApp.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderCerts = global::BoogieApp.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::BoogieApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::BoogieApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderPackage = global::BoogieApp.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderQuery = global::BoogieApp.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor = global::BoogieApp.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem = global::BoogieApp.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_color = global::BoogieApp.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_offset = global::BoogieApp.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerColor = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerX = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerY = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endColor = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endX = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endY = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_gradientRadius = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startColor = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startX = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startY = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_tileMode = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_type = global::BoogieApp.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Permissions.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::BoogieApp.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Sharpnado.Presentation.Forms.Droid.Resource.Animation.abc_fade_in = global::BoogieApp.Droid.Resource.Animation.abc_fade_in;
 			global::Sharpnado.Presentation.Forms.Droid.Resource.Animation.abc_fade_out = global::BoogieApp.Droid.Resource.Animation.abc_fade_out;
 			global::Sharpnado.Presentation.Forms.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::BoogieApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -10889,16 +11071,13 @@ namespace BoogieApp.Droid
 			public const int behavior_overlapTop = 2130903099;
 			
 			// aapt resource value: 0x7F03003C
-			public const int behavior_skipCollapsed = 2130903100;
-			
-			// aapt resource value: 0x7F03003E
-			public const int borderlessButtonStyle = 2130903102;
+			public const int behavior_peekHeight = 2130903100;
 			
 			// aapt resource value: 0x7F03003D
 			public const int behavior_skipCollapsed = 2130903101;
 			
 			// aapt resource value: 0x7F03003F
-			public const int bottomAppBarStyle = 2130903103;
+			public const int borderlessButtonStyle = 2130903103;
 			
 			// aapt resource value: 0x7F03003E
 			public const int borderWidth = 2130903102;
@@ -11093,7 +11272,7 @@ namespace BoogieApp.Droid
 			public const int chipStrokeWidth = 2130903166;
 			
 			// aapt resource value: 0x7F03007F
-			public const int collapseContentDescription = 2130903167;
+			public const int chipStyle = 2130903167;
 			
 			// aapt resource value: 0x7F030080
 			public const int circleCrop = 2130903168;
@@ -11102,10 +11281,7 @@ namespace BoogieApp.Droid
 			public const int closeIcon = 2130903169;
 			
 			// aapt resource value: 0x7F030082
-			public const int collapsedTitleTextAppearance = 2130903170;
-			
-			// aapt resource value: 0x7F030080
-			public const int collapseIcon = 2130903168;
+			public const int closeIconEnabled = 2130903170;
 			
 			// aapt resource value: 0x7F030083
 			public const int closeIconEndPadding = 2130903171;
@@ -11126,16 +11302,13 @@ namespace BoogieApp.Droid
 			public const int closeItemLayout = 2130903176;
 			
 			// aapt resource value: 0x7F030089
-			public const int colorControlNormal = 2130903177;
-			
-			// aapt resource value: 0x7F03008A
-			public const int colorError = 2130903178;
+			public const int collapseContentDescription = 2130903177;
 			
 			// aapt resource value: 0x7F03008B
 			public const int collapsedTitleGravity = 2130903179;
 			
 			// aapt resource value: 0x7F03008C
-			public const int colorPrimaryDark = 2130903180;
+			public const int collapsedTitleTextAppearance = 2130903180;
 			
 			// aapt resource value: 0x7F03008A
 			public const int collapseIcon = 2130903178;
@@ -11243,13 +11416,10 @@ namespace BoogieApp.Droid
 			public const int counterTextAppearance = 2130903214;
 			
 			// aapt resource value: 0x7F0300AF
-			public const int drawerArrowStyle = 2130903215;
-			
-			// aapt resource value: 0x7F0300B1
-			public const int dropdownListPreferredItemHeight = 2130903217;
+			public const int customNavigationLayout = 2130903215;
 			
 			// aapt resource value: 0x7F0300B0
-			public const int dropDownListViewStyle = 2130903216;
+			public const int defaultQueryHint = 2130903216;
 			
 			// aapt resource value: 0x7F0300B1
 			public const int dialogCornerRadius = 2130903217;
@@ -11279,13 +11449,10 @@ namespace BoogieApp.Droid
 			public const int drawableSize = 2130903225;
 			
 			// aapt resource value: 0x7F0300BA
-			public const int expandActivityOverflowButtonDrawable = 2130903226;
-			
-			// aapt resource value: 0x7F0300BB
-			public const int expanded = 2130903227;
+			public const int drawerArrowStyle = 2130903226;
 			
 			// aapt resource value: 0x7F0300BC
-			public const int expandedTitleGravity = 2130903228;
+			public const int dropdownListPreferredItemHeight = 2130903228;
 			
 			// aapt resource value: 0x7F0300BB
 			public const int dropDownListViewStyle = 2130903227;
@@ -11438,10 +11605,7 @@ namespace BoogieApp.Droid
 			public const int helperTextTextAppearance = 2130903277;
 			
 			// aapt resource value: 0x7F0300EE
-			public const int iconGravity = 2130903278;
-			
-			// aapt resource value: 0x7F0300F4
-			public const int iconifiedByDefault = 2130903284;
+			public const int hideMotionSpec = 2130903278;
 			
 			// aapt resource value: 0x7F0300EF
 			public const int hideOnContentScroll = 2130903279;
@@ -11456,7 +11620,7 @@ namespace BoogieApp.Droid
 			public const int hintEnabled = 2130903282;
 			
 			// aapt resource value: 0x7F0300F3
-			public const int iconTintMode = 2130903283;
+			public const int hintTextAppearance = 2130903283;
 			
 			// aapt resource value: 0x7F0300F4
 			public const int homeAsUpIndicator = 2130903284;
@@ -11474,7 +11638,7 @@ namespace BoogieApp.Droid
 			public const int iconEndPadding = 2130903288;
 			
 			// aapt resource value: 0x7F0300F9
-			public const int isLightTheme = 2130903289;
+			public const int iconGravity = 2130903289;
 			
 			// aapt resource value: 0x7F0300FF
 			public const int iconifiedByDefault = 2130903295;
@@ -11492,10 +11656,7 @@ namespace BoogieApp.Droid
 			public const int iconTint = 2130903293;
 			
 			// aapt resource value: 0x7F0300FE
-			public const int itemIconSize = 2130903294;
-			
-			// aapt resource value: 0x7F0300FF
-			public const int itemIconTint = 2130903295;
+			public const int iconTintMode = 2130903294;
 			
 			// aapt resource value: 0x7F030100
 			public const int imageAspectRatio = 2130903296;
@@ -12071,16 +12232,13 @@ namespace BoogieApp.Droid
 			public const int textAppearanceSubtitle1 = 2130903486;
 			
 			// aapt resource value: 0x7F0301BF
-			public const int titleMarginEnd = 2130903487;
-			
-			// aapt resource value: 0x7F0301C2
-			public const int titleMargins = 2130903490;
+			public const int textAppearanceSubtitle2 = 2130903487;
 			
 			// aapt resource value: 0x7F0301C0
 			public const int textColorAlertDialogListItem = 2130903488;
 			
 			// aapt resource value: 0x7F0301C1
-			public const int titleMarginTop = 2130903489;
+			public const int textColorSearchUrl = 2130903489;
 			
 			// aapt resource value: 0x7F0301C2
 			public const int textEndPadding = 2130903490;
@@ -12134,7 +12292,7 @@ namespace BoogieApp.Droid
 			public const int titleMarginBottom = 2130903506;
 			
 			// aapt resource value: 0x7F0301D3
-			public const int windowActionBar = 2130903507;
+			public const int titleMarginEnd = 2130903507;
 			
 			// aapt resource value: 0x7F0301D6
 			public const int titleMargins = 2130903510;
@@ -12143,10 +12301,7 @@ namespace BoogieApp.Droid
 			public const int titleMarginStart = 2130903508;
 			
 			// aapt resource value: 0x7F0301D5
-			public const int windowActionModeOverlay = 2130903509;
-			
-			// aapt resource value: 0x7F0301D6
-			public const int windowFixedHeightMajor = 2130903510;
+			public const int titleMarginTop = 2130903509;
 			
 			// aapt resource value: 0x7F0301D7
 			public const int titleTextAppearance = 2130903511;
@@ -12164,7 +12319,7 @@ namespace BoogieApp.Droid
 			public const int toolbarNavigationButtonStyle = 2130903515;
 			
 			// aapt resource value: 0x7F0301DC
-			public const int windowNoTitle = 2130903516;
+			public const int toolbarStyle = 2130903516;
 			
 			// aapt resource value: 0x7F0301DD
 			public const int tooltipForegroundColor = 2130903517;
@@ -12610,7 +12765,7 @@ namespace BoogieApp.Droid
 			public const int mtrl_btn_text_color_selector = 2131034216;
 			
 			// aapt resource value: 0x7F050069
-			public const int mtrl_tabs_ripple_color = 2131034217;
+			public const int mtrl_btn_transparent_bg_color = 2131034217;
 			
 			// aapt resource value: 0x7F05006A
 			public const int mtrl_chip_background_color = 2131034218;
@@ -12625,10 +12780,7 @@ namespace BoogieApp.Droid
 			public const int mtrl_chip_text_color = 2131034221;
 			
 			// aapt resource value: 0x7F05006E
-			public const int mtrl_textinput_hovered_box_stroke_color = 2131034222;
-			
-			// aapt resource value: 0x7F05006A
-			public const int mtrl_text_btn_text_color_selector = 2131034218;
+			public const int mtrl_fab_ripple_color = 2131034222;
 			
 			// aapt resource value: 0x7F05006F
 			public const int mtrl_scrim_color = 2131034223;
@@ -12646,10 +12798,7 @@ namespace BoogieApp.Droid
 			public const int mtrl_tabs_legacy_text_color_selector = 2131034227;
 			
 			// aapt resource value: 0x7F050074
-			public const int primary_material_dark = 2131034228;
-			
-			// aapt resource value: 0x7F050075
-			public const int primary_material_light = 2131034229;
+			public const int mtrl_tabs_ripple_color = 2131034228;
 			
 			// aapt resource value: 0x7F050076
 			public const int mtrl_textinput_default_box_stroke_color = 2131034230;
@@ -12661,7 +12810,7 @@ namespace BoogieApp.Droid
 			public const int mtrl_textinput_filled_box_default_background_color = 2131034232;
 			
 			// aapt resource value: 0x7F050079
-			public const int primary_text_disabled_material_light = 2131034233;
+			public const int mtrl_textinput_hovered_box_stroke_color = 2131034233;
 			
 			// aapt resource value: 0x7F050075
 			public const int mtrl_text_btn_text_color_selector = 2131034229;
@@ -12706,7 +12855,7 @@ namespace BoogieApp.Droid
 			public const int ripple_material_light = 2131034246;
 			
 			// aapt resource value: 0x7F050087
-			public const int tooltip_background_light = 2131034247;
+			public const int secondary_text_default_material_dark = 2131034247;
 			
 			// aapt resource value: 0x7F050088
 			public const int secondary_text_default_material_light = 2131034248;
@@ -13689,82 +13838,175 @@ namespace BoogieApp.Droid
 			public const int avd_show_password = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int design_bottom_navigation_item_background = 2131165276;
+			public const int bottom_shadow = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int common_google_signin_btn_icon_dark = 2131165277;
+			public const int business = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int design_ic_visibility = 2131165278;
+			public const int common_full_open_on_phone = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int design_ic_visibility_off = 2131165279;
+			public const int common_google_signin_btn_icon_dark = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_password_eye = 2131165280;
+			public const int common_google_signin_btn_icon_dark_focused = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_snackbar_background = 2131165281;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int ic_mtrl_chip_checked_black = 2131165282;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int ic_mtrl_chip_checked_circle = 2131165283;
+			public const int common_google_signin_btn_icon_disabled = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int ic_mtrl_chip_close_circle = 2131165284;
+			public const int common_google_signin_btn_icon_light = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int mtrl_snackbar_background = 2131165285;
+			public const int common_google_signin_btn_icon_light_focused = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int mtrl_tabs_default_indicator = 2131165286;
+			public const int common_google_signin_btn_icon_light_normal = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int navigation_empty_icon = 2131165287;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int notification_action_background = 2131165288;
+			public const int common_google_signin_btn_text_dark = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int notification_bg = 2131165289;
+			public const int common_google_signin_btn_text_dark_focused = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int notification_bg_low = 2131165290;
+			public const int common_google_signin_btn_text_dark_normal = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int notification_bg_low_normal = 2131165291;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int notification_bg_low_pressed = 2131165292;
+			public const int common_google_signin_btn_text_disabled = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int notification_bg_normal = 2131165293;
+			public const int common_google_signin_btn_text_light = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int notification_bg_normal_pressed = 2131165294;
+			public const int common_google_signin_btn_text_light_focused = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int notification_icon_background = 2131165295;
+			public const int common_google_signin_btn_text_light_normal = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int notification_template_icon_bg = 2131165296;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int notification_template_icon_low_bg = 2131165297;
+			public const int design_bottom_navigation_item_background = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int notification_tile_bg = 2131165298;
+			public const int design_fab_background = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int notify_panel_notification_icon_bg = 2131165299;
+			public const int design_ic_visibility = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int tooltip_frame_dark = 2131165300;
+			public const int design_ic_visibility_off = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int tooltip_frame_light = 2131165301;
+			public const int design_password_eye = 2131165301;
+			
+			// aapt resource value: 0x7F070076
+			public const int design_snackbar_background = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int Drinks = 2131165303;
+			
+			// aapt resource value: 0x7F070078
+			public const int Food = 2131165304;
+			
+			// aapt resource value: 0x7F070079
+			public const int Fuel = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int googleg_disabled_color_18 = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int googleg_standard_color_18 = 2131165307;
+			
+			// aapt resource value: 0x7F07007C
+			public const int Grocery = 2131165308;
+			
+			// aapt resource value: 0x7F07007D
+			public const int ic_mtrl_chip_checked_black = 2131165309;
+			
+			// aapt resource value: 0x7F07007E
+			public const int ic_mtrl_chip_checked_circle = 2131165310;
+			
+			// aapt resource value: 0x7F07007F
+			public const int ic_mtrl_chip_close_circle = 2131165311;
+			
+			// aapt resource value: 0x7F070080
+			public const int mtrl_snackbar_background = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int mtrl_tabs_default_indicator = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int navigation_empty_icon = 2131165314;
+			
+			// aapt resource value: 0x7F070083
+			public const int notification_action_background = 2131165315;
+			
+			// aapt resource value: 0x7F070084
+			public const int notification_bg = 2131165316;
+			
+			// aapt resource value: 0x7F070085
+			public const int notification_bg_low = 2131165317;
+			
+			// aapt resource value: 0x7F070086
+			public const int notification_bg_low_normal = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int notification_bg_low_pressed = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int notification_bg_normal = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int notification_bg_normal_pressed = 2131165321;
+			
+			// aapt resource value: 0x7F07008A
+			public const int notification_icon_background = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int notification_template_icon_bg = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int notification_template_icon_low_bg = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int notification_tile_bg = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int notify_panel_notification_icon_bg = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int shapes = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int tooltip_frame_dark = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int tooltip_frame_light = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int top_shadow = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int user = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int weshop = 2131165332;
 			
 			static Drawable()
 			{
@@ -13996,10 +14238,10 @@ namespace BoogieApp.Droid
 			public const int expanded_menu = 2131230796;
 			
 			// aapt resource value: 0x7F08004B
-			public const int fill_horizontal = 2131230795;
+			public const int expand_activities_button = 2131230795;
 			
-			// aapt resource value: 0x7F08004C
-			public const int fill_vertical = 2131230796;
+			// aapt resource value: 0x7F08004D
+			public const int fill = 2131230797;
 			
 			// aapt resource value: 0x7F080050
 			public const int filled = 2131230800;
@@ -14008,16 +14250,10 @@ namespace BoogieApp.Droid
 			public const int fill_horizontal = 2131230798;
 			
 			// aapt resource value: 0x7F08004F
-			public const int flyoutcontent_appbar = 2131230799;
-			
-			// aapt resource value: 0x7F080050
-			public const int flyoutcontent_recycler = 2131230800;
+			public const int fill_vertical = 2131230799;
 			
 			// aapt resource value: 0x7F080051
-			public const int forever = 2131230801;
-			
-			// aapt resource value: 0x7F080002
-			public const int FUNCTION = 2131230722;
+			public const int @fixed = 2131230801;
 			
 			// aapt resource value: 0x7F080052
 			public const int flyoutcontent_appbar = 2131230802;
@@ -14026,7 +14262,7 @@ namespace BoogieApp.Droid
 			public const int flyoutcontent_recycler = 2131230803;
 			
 			// aapt resource value: 0x7F080054
-			public const int home = 2131230804;
+			public const int forever = 2131230804;
 			
 			// aapt resource value: 0x7F080002
 			public const int FUNCTION = 2131230722;
@@ -14095,10 +14331,7 @@ namespace BoogieApp.Droid
 			public const int list_item = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int message = 2131230826;
-			
-			// aapt resource value: 0x7F080003
-			public const int META = 2131230723;
+			public const int main_appbar = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
 			public const int main_tablayout = 2131230827;
@@ -14116,7 +14349,7 @@ namespace BoogieApp.Droid
 			public const int media_actions = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int navigation_header_container = 2131230832;
+			public const int message = 2131230832;
 			
 			// aapt resource value: 0x7F080003
 			public const int META = 2131230723;
@@ -14185,10 +14418,7 @@ namespace BoogieApp.Droid
 			public const int right = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int scroll = 2131230854;
-			
-			// aapt resource value: 0x7F08008A
-			public const int scrollable = 2131230858;
+			public const int right_icon = 2131230854;
 			
 			// aapt resource value: 0x7F080087
 			public const int right_side = 2131230855;
@@ -14197,7 +14427,7 @@ namespace BoogieApp.Droid
 			public const int satellite = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int scrollView = 2131230857;
+			public const int save_image_matrix = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
 			public const int save_non_transition_alpha = 2131230858;
@@ -14209,7 +14439,7 @@ namespace BoogieApp.Droid
 			public const int screen = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int search_button = 2131230861;
+			public const int scroll = 2131230861;
 			
 			// aapt resource value: 0x7F080091
 			public const int scrollable = 2131230865;
@@ -14221,10 +14451,7 @@ namespace BoogieApp.Droid
 			public const int scrollIndicatorUp = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int search_go_btn = 2131230864;
-			
-			// aapt resource value: 0x7F080091
-			public const int search_mag_icon = 2131230865;
+			public const int scrollView = 2131230864;
 			
 			// aapt resource value: 0x7F080092
 			public const int search_badge = 2131230866;
@@ -14233,13 +14460,10 @@ namespace BoogieApp.Droid
 			public const int search_bar = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int search_voice_btn = 2131230868;
-			
-			// aapt resource value: 0x7F080096
-			public const int selected = 2131230870;
+			public const int search_button = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int select_dialog_listview = 2131230869;
+			public const int search_close_btn = 2131230869;
 			
 			// aapt resource value: 0x7F080096
 			public const int search_edit_frame = 2131230870;
@@ -14248,10 +14472,7 @@ namespace BoogieApp.Droid
 			public const int search_go_btn = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int shellcontent_toolbar = 2131230872;
-			
-			// aapt resource value: 0x7F080004
-			public const int SHIFT = 2131230724;
+			public const int search_mag_icon = 2131230872;
 			
 			// aapt resource value: 0x7F080099
 			public const int search_plate = 2131230873;
@@ -14260,13 +14481,10 @@ namespace BoogieApp.Droid
 			public const int search_src_text = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int showHome = 2131230875;
-			
-			// aapt resource value: 0x7F08009C
-			public const int showTitle = 2131230876;
+			public const int search_voice_btn = 2131230875;
 			
 			// aapt resource value: 0x7F08009D
-			public const int sliding_tabs = 2131230877;
+			public const int selected = 2131230877;
 			
 			// aapt resource value: 0x7F08009C
 			public const int select_dialog_listview = 2131230876;
@@ -14275,7 +14493,7 @@ namespace BoogieApp.Droid
 			public const int shellcontent_appbar = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int snackbar_action = 2131230879;
+			public const int shellcontent_toolbar = 2131230879;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
@@ -14317,10 +14535,7 @@ namespace BoogieApp.Droid
 			public const int split_action_bar = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int submit_area = 2131230892;
-			
-			// aapt resource value: 0x7F080005
-			public const int SYM = 2131230725;
+			public const int src_atop = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
 			public const int src_in = 2131230893;
@@ -14338,22 +14553,13 @@ namespace BoogieApp.Droid
 			public const int status_bar_latest_event_content = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int text2 = 2131230898;
-			
-			// aapt resource value: 0x7F0800B7
-			public const int textinput_counter = 2131230903;
-			
-			// aapt resource value: 0x7F0800B8
-			public const int textinput_error = 2131230904;
-			
-			// aapt resource value: 0x7F0800B9
-			public const int textinput_helper_text = 2131230905;
+			public const int stretch = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
 			public const int submenuarrow = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int textSpacerNoTitle = 2131230900;
+			public const int submit_area = 2131230900;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
@@ -14362,7 +14568,7 @@ namespace BoogieApp.Droid
 			public const int tabMode = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int text_input_password_toggle = 2131230902;
+			public const int tag_transition_group = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
 			public const int tag_unhandled_key_event_manager = 2131230903;
@@ -14377,7 +14583,7 @@ namespace BoogieApp.Droid
 			public const int text = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int title = 2131230907;
+			public const int text2 = 2131230907;
 			
 			// aapt resource value: 0x7F0800C0
 			public const int textinput_counter = 2131230912;
@@ -14398,16 +14604,7 @@ namespace BoogieApp.Droid
 			public const int textStart = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int top = 2131230911;
-			
-			// aapt resource value: 0x7F0800C0
-			public const int topPanel = 2131230912;
-			
-			// aapt resource value: 0x7F0800C1
-			public const int touch_outside = 2131230913;
-			
-			// aapt resource value: 0x7F0800C2
-			public const int transition_current_scene = 2131230914;
+			public const int text_input_password_toggle = 2131230911;
 			
 			// aapt resource value: 0x7F0800C3
 			public const int time = 2131230915;
@@ -14443,7 +14640,7 @@ namespace BoogieApp.Droid
 			public const int transition_position = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int wrap_content = 2131230926;
+			public const int transition_scene_layoutid_cache = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
 			public const int transition_transform = 2131230927;
@@ -14531,7 +14728,7 @@ namespace BoogieApp.Droid
 			public const int mtrl_tab_indicator_anim_duration_ms = 2131296269;
 			
 			// aapt resource value: 0x7F09000E
-			public const int status_bar_notification_info_maxnum = 2131296270;
+			public const int show_password_duration = 2131296270;
 			
 			// aapt resource value: 0x7F09000F
 			public const int status_bar_notification_info_maxnum = 2131296271;
@@ -14952,37 +15149,37 @@ namespace BoogieApp.Droid
 			public const int character_counter_content_description = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int fab_transformation_scrim_behavior = 2131558443;
+			public const int character_counter_pattern = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int fab_transformation_sheet_behavior = 2131558444;
+			public const int common_google_play_services_enable_button = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int hide_bottom_view_on_scroll_behavior = 2131558445;
+			public const int common_google_play_services_enable_text = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int mtrl_chip_close_icon_content_description = 2131558446;
+			public const int common_google_play_services_enable_title = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int password_toggle_content_description = 2131558447;
+			public const int common_google_play_services_install_button = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int path_password_eye = 2131558448;
+			public const int common_google_play_services_install_text = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int path_password_eye_mask_strike_through = 2131558449;
+			public const int common_google_play_services_install_title = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int path_password_eye_mask_visible = 2131558450;
+			public const int common_google_play_services_notification_channel_name = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int path_password_strike_through = 2131558451;
+			public const int common_google_play_services_notification_ticker = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int search_menu_title = 2131558452;
+			public const int common_google_play_services_unknown_issue = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int status_bar_notification_info_overflow = 2131558453;
+			public const int common_google_play_services_unsupported_text = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
 			public const int common_google_play_services_update_button = 2131558454;
@@ -15727,16 +15924,13 @@ namespace BoogieApp.Droid
 			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131624157;
 			
 			// aapt resource value: 0x7F0E00DE
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131624158;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131624158;
 			
 			// aapt resource value: 0x7F0E00E4
 			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131624164;
 			
 			// aapt resource value: 0x7F0E00DF
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131624159;
-			
-			// aapt resource value: 0x7F0E00E5
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131624165;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131624159;
 			
 			// aapt resource value: 0x7F0E00E0
 			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131624160;
@@ -16570,10 +16764,7 @@ namespace BoogieApp.Droid
 			public const int Widget_MaterialComponents_Toolbar = 2131624437;
 			
 			// aapt resource value: 0x7F0E01F6
-			public const int Widget_MaterialComponents_Toolbar = 2131624438;
-			
-			// aapt resource value: 0x7F0E01F7
-			public const int Widget_Support_CoordinatorLayout = 2131624439;
+			public const int Widget_Support_CoordinatorLayout = 2131624438;
 			
 			static Style()
 			{

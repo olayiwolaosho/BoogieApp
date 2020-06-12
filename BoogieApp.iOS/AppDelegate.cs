@@ -25,6 +25,7 @@ namespace BoogieApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             SharpnadoInitializer.Initialize();
+            Xamarin.FormsMaps.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
