@@ -1,23 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
 using Android.Content;
-using Android.Content.Res;
 using Android.Graphics.Drawables;
-using Android.Text;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
 using BoogieApp.Droid.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(BoogieApp.Controls.TransparentEntry), typeof(TransparentEntryRender))]
+[assembly: ExportRenderer(typeof(BoogieApp.Controls.WhitePicker), typeof(WhitePickerRenderer))]
 namespace BoogieApp.Droid.Controls
 {
-    public class TransparentEntryRender : EntryRenderer
+    class WhitePickerRenderer :  PickerRenderer
     {
-        public TransparentEntryRender(Context context) : base(context)
+        public WhitePickerRenderer(Context context) : base(context)
         {
 
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Picker> e)
         {
             base.OnElementChanged(e);
 
@@ -28,11 +35,11 @@ namespace BoogieApp.Droid.Controls
                     //Control.SetBackgroundResource(Resource.Layout.rounded_shape);
                     var gradientDrawable = new GradientDrawable();
                     gradientDrawable.SetCornerRadius(60f);
-                   // gradientDrawable.SetStroke(5, Android.Graphics.Color.DeepPink);
-                    gradientDrawable.SetColor(Android.Graphics.Color.White);
+                    // gradientDrawable.SetStroke(5, Android.Graphics.Color.DeepPink);
+                    gradientDrawable.SetColor(Android.Graphics.Color.Transparent);
                     Control.SetBackground(gradientDrawable);
 
-                    Control.SetPadding(50, Control.PaddingTop, Control.PaddingRight,
+                    Control.SetPadding(40, Control.PaddingTop, Control.PaddingRight,
                         Control.PaddingBottom);
                 }
             }

@@ -22,6 +22,10 @@ namespace BoogieApp.Controls.ControlViews
             {
                 Expandsheet();
             });
+            MessagingCenter.Subscribe<RegistrationPage>(this, "Close", x =>
+            {
+                CloseExpandsheet();
+            });
         }
 
         double y;
@@ -65,6 +69,20 @@ namespace BoogieApp.Controls.ControlViews
             y = translationY;
             expandeButton.FadeTo(0, 100, Easing.CubicOut);
         }
+
+        private void CloseExpandsheet()
+        {
+            var translationY = (frame.TranslationY - (Height - Height * PercentageExpandBottomSheet)) - CornerRadiusBottomSheet;
+            RelativeLayout.SetHeightConstraint(contentview, Constraint.RelativeToParent((parent) =>
+            {
+                return parent.Height * PercentageExpandBottomSheet;
+            }));
+
+            frame.TranslateTo(frame.X, translationY, 10, Easing.BounceIn);
+            y = translationY;
+            expandeButton.FadeTo(0, 100, Easing.CubicOut);
+        }
+
 
         private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
         {

@@ -14,13 +14,54 @@
     <ContentPage.BindingContext>
         <vm:RegistrationPageViewModel/>
     </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type local:TransparentEntry}" x:Key="myentry">
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+                <Setter Property="PlaceholderColor" Value="LightGray"/>
+            </Style>
+            
+            <Style TargetType="{x:Type local:WhitePicker}" x:Key="mypicker">
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+                <Setter Property="TextColor" Value="LightGray"/>
+                <Setter Property="TitleColor" Value="LightGray"/>
+            </Style>
+
+            <Style TargetType="{x:Type Frame}" x:Key="myframe">
+                <Setter Property="HeightRequest" Value="15"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <!--<Setter Property="Padding" Value="1"/>-->
+            </Style>
+            
+            <Style TargetType="{x:Type Label}" x:Key="mylabel">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style>
+            
+            <Style TargetType="{x:Type Label}" x:Key="Addresslabel">
+                <Setter Property="TextColor" Value="LightGray"/>
+                <Setter Property="Margin" Value="-15"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="Padding" Value="30,6,0,0"/>
+                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+            </Style>
+            
+        </ResourceDictionary> 
+    </ContentPage.Resources>
     
     <customControl:BottomSheet
         PercentageHeightMainPage="1" 
         IsBottomButtonEnable="False"
         PercentageLockMainPageTranslation=".3"
         PercentageHideBottomSheet=".7"
-        PercentageExpandBottomSheet=".6"
+        PercentageExpandBottomSheet=".7"
         MinPercentageBottomSheetSwipe=".95"
         MaxPercentageBottomSheetSwipe="-0.03"
         CornerRadiusBottomSheet="25"
@@ -32,24 +73,30 @@
         <customControl:BottomSheet.ContentMainPage>
             <StackLayout Padding="15">
                 <ImageButton Source="{local1:ImageResource BoogieApp.Images.back.png}" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"/>
-                <Label Text="Create an Account" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="Create an Account" HorizontalOptions="Center" TextColor="White" FontSize="20"/>
 
                 <StackLayout Padding="40,0">
-                    <Label Text="Full Name" TextColor="White"/>
-                    <local:TransparentEntry Placeholder="Name"/>
+                    <Label Text="Full Name"  Style="{StaticResource mylabel}"/>
+                    <local:TransparentEntry Text="{Binding FullName}" Placeholder="Name" Style="{StaticResource myentry}"/>
 
-                    <Label Text="Email" TextColor="White"/>
-                    <local:TransparentEntry Placeholder="Name"/>
+                    <Label Text="Email" Style="{StaticResource mylabel}"/>
+                    <local:TransparentEntry Placeholder="Email" Text="{Binding Email}" Style="{StaticResource myentry}"/>
 
-                    <Label Text="Password" TextColor="White"/>
-                    <local:TransparentEntry Placeholder="Name"/>
+                    <Label Text="Password" Style="{StaticResource mylabel}"/>
+                    <local:TransparentEntry Placeholder="Password" Text="{Binding Password}" IsPassword="True" Style="{StaticResource myentry}"/>
 
-                    <Label Text="Phonenumber" TextColor="White"/>
-                    <local:TransparentEntry Placeholder="Phonenumber"/>
+                    <Label Text="Phonenumber" Style="{StaticResource mylabel}"/>
+                    <local:TransparentEntry Placeholder="Phonenumber (08011235964)" Text="{Binding Phoneno}" Keyboard="Numeric" Style="{StaticResource myentry}"/>
 
-                    <Label Text="Address" TextColor="White"/>
-                    <Frame CornerRadius="20" HeightRequest="5">
-                        <Label Text="addresss" Margin="-15" VerticalOptions="Center">
+                    <Label Text="Location" Style="{StaticResource mylabel}"/>
+                    <Frame Style="{StaticResource myframe}">
+                        <local:WhitePicker Title="Select a location" ItemsSource="{Binding Locations}" SelectedItem="{Binding LocationSelected, Mode=TwoWay}"  Margin="-17" Style="{StaticResource  mypicker}"/>
+                    </Frame>
+
+
+                    <Label Text="Address" Style="{StaticResource mylabel}"/>
+                    <Frame Style="{StaticResource myframe}">
+                        <Label Text="Addresss" Style="{StaticResource Addresslabel}">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                             </Label.GestureRecognizers>
@@ -57,7 +104,12 @@
                     </Frame>
 
                     <Label Text="By creating an account you agree to our terms of services and privacy policy" HorizontalTextAlignment="Center" TextColor="White"/>
-                    <Button Text="->"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source=""/>
+                        <Image Source=""/>
+                        <Image Source=""/>
+                    </StackLayout>
+                    <Button Text="->" TextColor="White" FontSize="20" CornerRadius="30" Padding="15" BackgroundColor="Blue" Command="{Binding PhoneAuth}"/>
                 </StackLayout>
 
                 <StackLayout.GestureRecognizers>

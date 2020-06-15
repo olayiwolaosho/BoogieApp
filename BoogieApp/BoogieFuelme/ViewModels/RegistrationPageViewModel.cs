@@ -65,6 +65,32 @@ namespace BoogieApp.BoogieFuelme.ViewModels
         public bool ShowRecentPlaces { get; set; }
         bool _isPickupFocused = true;
 
+        public List<string> Locations
+        {
+            get
+            {
+              return new List<string>()
+              {
+                "Gbagada",
+                "Ogudu-Ojota",
+                "Alapere",
+                "Oworonshoki",
+                "Akoka",
+              };
+            }
+        }
+
+        private string locationselected;
+        public string LocationSelected 
+        {
+            get => locationselected; 
+            set
+            {
+                locationselected = value;
+                RaisePropertyChanged(() => LocationSelected);
+            }    
+        }
+
         string _pickupText;
         public string PickupText
         {
@@ -171,7 +197,7 @@ namespace BoogieApp.BoogieFuelme.ViewModels
                     _originLatitud = $"{place.Latitude}";
                     _originLongitud = $"{place.Longitude}";
                     _isPickupFocused = false;
-                    FocusOriginCommand.Execute(null);
+                 //   FocusOriginCommand.Execute();
                 }
                 else
                 {
@@ -186,7 +212,7 @@ namespace BoogieApp.BoogieFuelme.ViewModels
                     }
                     else
                     {
-                        LoadRouteCommand.Execute(null);
+                    //  LoadRouteCommand.Execute(null);
                         await App.Current.MainPage.Navigation.PopAsync(false);
                         CleanFields();
                     }
@@ -202,5 +228,8 @@ namespace BoogieApp.BoogieFuelme.ViewModels
             PlaceSelected = null;
 
         }
+
+        
+
     }
 }

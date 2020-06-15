@@ -14,6 +14,7 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistrationPage : ContentPage
     {
+        int count = 0;
         RegistrationPageViewModel RPVM => BindingContext as RegistrationPageViewModel;  
         public static readonly BindableProperty FocusOriginCommandProperty =
            BindableProperty.Create(nameof(FocusOriginCommand), typeof(ICommand), typeof(RegistrationPage), null, BindingMode.TwoWay);
@@ -50,8 +51,12 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
 
         void SearchBox_Focused(object sender, FocusEventArgs e)
         {
-            
-            MessagingCenter.Send(this, "Expand");
+            if(count < 1)
+            {
+                MessagingCenter.Send(this, "Expand");
+                count++;
+            }
+           
             // GridFilter.IsVisible = true;
             //  openBottomSheet();
         }
@@ -66,6 +71,9 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
 
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
+          //  bottom.PercentageHideBottomSheet = 0.1;
+            MessagingCenter.Send(this, "Close");
+          //  bottom.PercentageHideBottomSheet = 0.7;
             //bottomSheet.IsVisible = false;
         }
 
