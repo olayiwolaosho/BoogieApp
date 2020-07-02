@@ -13,10 +13,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Helpers\IconFont.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Fonts\JosefinSans-Bold.ttf" />
     <None Remove="Fonts\JosefinSans-Regular.ttf" />
     <None Remove="Fonts\JosefinSans-SemiBold.ttf" />
+    <None Remove="Fonts\Rajdhani-Regular.ttf" />
+    <None Remove="Fonts\Rajdhani-SemiBold.ttf" />
     <None Remove="Images\add.png" />
+    <None Remove="Images\address.png" />
     <None Remove="Images\back.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\Boogielogo.png" />
@@ -28,6 +35,7 @@
     <None Remove="Images\checklist.png" />
     <None Remove="Images\CreditCard.png" />
     <None Remove="Images\Deleveries.png" />
+    <None Remove="Images\down.png" />
     <None Remove="Images\Extra.png" />
     <None Remove="Images\facebook.png" />
     <None Remove="Images\facebook2x.png" />
@@ -36,6 +44,8 @@
     <None Remove="Images\gPlus2x.png" />
     <None Remove="Images\gPlus3x.png" />
     <None Remove="Images\Grocery.jpg" />
+    <None Remove="Images\lock.png" />
+    <None Remove="Images\mail.png" />
     <None Remove="Images\myhome.png" />
     <None Remove="Images\next.png" />
     <None Remove="Images\OrderTab.png" />
@@ -44,13 +54,20 @@
     <None Remove="Images\Profile1.png" />
     <None Remove="Images\RewardPoint.png" />
     <None Remove="Images\SList.png" />
+    <None Remove="Images\smartphone.png" />
     <None Remove="Images\twitter.png" />
     <None Remove="Images\twitter2x.png" />
     <None Remove="Images\twitter3x.png" />
+    <None Remove="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\materialdesignicons-webfont.ttf" />
     <EmbeddedResource Include="Fonts\JosefinSans-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Rajdhani-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Rajdhani-SemiBold.ttf" />
+    <EmbeddedResource Include="Helpers\IconFont.cs" />
+    <EmbeddedResource Include="Images\address.png" />
     <EmbeddedResource Include="Images\back.png" />
     <EmbeddedResource Include="Images\Boogielogo2.png" />
     <EmbeddedResource Include="Images\BoogieVIP.png" />
@@ -68,6 +85,7 @@
     <EmbeddedResource Include="Images\checklist.png" />
     <EmbeddedResource Include="Images\CreditCard.png" />
     <EmbeddedResource Include="Images\Deleveries.png" />
+    <EmbeddedResource Include="Images\down.png" />
     <EmbeddedResource Include="Images\Extra.png" />
     <EmbeddedResource Include="Images\facebook.png" />
     <EmbeddedResource Include="Images\facebook2x.png" />
@@ -75,6 +93,8 @@
     <EmbeddedResource Include="Images\gPlus.png" />
     <EmbeddedResource Include="Images\gPlus2x.png" />
     <EmbeddedResource Include="Images\gPlus3x.png" />
+    <EmbeddedResource Include="Images\lock.png" />
+    <EmbeddedResource Include="Images\mail.png" />
     <EmbeddedResource Include="Images\myhome.png" />
     <EmbeddedResource Include="Images\next.png" />
     <EmbeddedResource Include="Images\OrderTab.png" />
@@ -83,19 +103,27 @@
     <EmbeddedResource Include="Images\Profile1.png" />
     <EmbeddedResource Include="Images\RewardPoint.png" />
     <EmbeddedResource Include="Images\SList.png" />
+    <EmbeddedResource Include="Images\smartphone.png" />
     <EmbeddedResource Include="Images\twitter.png" />
     <EmbeddedResource Include="Images\twitter2x.png" />
     <EmbeddedResource Include="Images\twitter3x.png" />
+    <EmbeddedResource Include="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="SendGrid" Version="9.17.0" />
     <PackageReference Include="Sharpnado.Presentation.Forms" Version="1.6.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+    <PackageReference Include="Twilio" Version="5.44.0" />
+    <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.3.0" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.847" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.7.0.968" />
+    <PackageReference Include="Xamarin.Forms.OpenWhatsApp" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.968" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="BoogieKnockKnock\View\ShoppingCategories.xaml.cs">
@@ -103,7 +131,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="BoogieFuelme\Views\AuthenticationView\FacebookLogin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="BoogieFuelme\Views\AuthenticationView\RegistrationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BoogieFuelme\Views\AuthenticationView\Verification.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="BoogieKnockKnock\View\AddCreditCard.xaml">
@@ -145,5 +179,9 @@
     <EmbeddedResource Update="Controls\ControlViews\BottomSheet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BoogieFuelme\Jinglet\" />
+    <Folder Include="BoogieKnockKnock\Services\" />
   </ItemGroup>
 </Project>

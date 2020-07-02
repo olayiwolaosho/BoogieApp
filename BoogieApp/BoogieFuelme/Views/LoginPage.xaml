@@ -3,79 +3,133 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BoogieApp.Views.LoginPage"
              xmlns:local="clr-namespace:BoogieApp.Controls"
-             BackgroundColor="#52C5FC"
+             xmlns:local1="clr-namespace:BoogieApp.Images"
              NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type local:BorderlessEntry}" x:Key="myentry">
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="Margin" Value="5,5,5,5"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="PlaceholderColor" Value="#666666"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="17"/>
+            </Style>
+
+            <Style TargetType="{x:Type local:WhitePicker}" x:Key="mypicker">
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="TextColor" Value="{Binding Addresscolor}"/>
+                <Setter Property="TitleColor" Value="#666666"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="{x:Type Frame}" x:Key="myframe">
+                <Setter Property="HeightRequest" Value="15"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="Margin" Value="10,0,0,10"/>
+                <Setter Property="Padding" Value="1"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="{x:Type Label}" x:Key="mylabel">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="{x:Type Frame}" x:Key="mystack">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="Padding" Value="0,0,15,0"/>
+                <Setter Property="Margin" Value="15"/>
+                <Setter Property="BorderColor" Value="#666666"/>
+                <Setter Property="CornerRadius" Value="7"/>
+            </Style>
+
+            <Style TargetType="{x:Type Label}" x:Key="Addresslabel">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Padding" Value="10,3,0,0"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="TextColor" Value="{Binding Addresscolor}"/>
+            </Style>
+
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons"/>
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
-            <Label HorizontalOptions="Center"
-                   Text="Sign in"
-                   TextColor="White"
-                   FontFamily="MyAwesomeCustomFont"
-                   FontSize="30" />
+        <StackLayout Padding="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsNotBusy}">
+            <!--<ImageButton Source="{local1:ImageResource BoogieApp.Images.back.png}" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"/>-->
+            <Label Text="Login" HorizontalOptions="Center" FontSize="25" TextColor="#666666" FontFamily="RajdhaniSem"/>
+            <ImageButton Source="{local1:ImageResource BoogieApp.Images.Boogielogo2.png}" BackgroundColor="White" HorizontalOptions="Center" WidthRequest="170"/>
 
-    <StackLayout Spacing="30" Padding="30">
-        <local:TransparentEntry Placeholder="Enter Your Email"
-                   PlaceholderColor="Gray"
-                   Keyboard="Email"
-                   FontFamily="MyAwesomeCustomFont"
-                   FontSize="20"
-                   HeightRequest="55"
-                   Text="{Binding Email}"
-                                        />
-           
+            
+                <Frame Style="{StaticResource mystack}">
+                    <StackLayout Orientation="Horizontal">
+                        <!--<Label Text="Email" Style="{StaticResource mylabel}"/>-->
+                    <local:BorderlessEntry Placeholder="Mobilehone" Text="{Binding Phonenumber}" Style="{StaticResource myentry}"/>
+                        <Image Source="{local1:ImageResource BoogieApp.Images.mail.png}"/>
+                    </StackLayout>
+                </Frame>
 
-      
-                <local:TransparentEntry Placeholder="Enter Your Password"
-                   PlaceholderColor="Gray"
-                   IsPassword="True"
-                   FontFamily="MyAwesomeCustomFont"
-                   FontSize="20"
-                   HeightRequest="55"
-                   Text="{Binding Password}"  Margin="-2"  />
-           
-    </StackLayout>
-                
+                <Frame Style="{StaticResource mystack}">
+                    <StackLayout Orientation="Horizontal">
+                        <!--<Label Text="Password" Style="{StaticResource mylabel}"/>-->
+                        <local:BorderlessEntry Placeholder="Password"  Text="{Binding Password}" IsPassword="True" Style="{StaticResource myentry}"/>
+                        <Image Source="{local1:ImageResource BoogieApp.Images.lock.png}"/>
+                    </StackLayout>
+                </Frame>
 
-            <Button x:Name="LoginButton"
-                    Text="CONTINUE"
-                    FontFamily="MyAwesomeCustomFont"
-                    FontSize="20"
-                    BackgroundColor="#52C5FC"
-                    TextColor="White"
-                    BorderWidth="3"
-                    BorderRadius="20"
-                    BorderColor="White"
-                    HorizontalOptions="CenterAndExpand"
-                    WidthRequest="350"
-                    HeightRequest="60"
-                    Margin="20"
-                    Clicked="LoginButton_Clicked"/>
+            <Grid>
+                <Button x:Name="LoginButton"
+                    Text="CONTINUE" TextColor="#7F7F7F" FontSize="17" CornerRadius="13" Padding="70,0,70,0" BackgroundColor="#91D8F7"
+                    Command="{Binding loginsuccess}"
+                        IsVisible="{Binding Visiblebutton}" HorizontalOptions="Center"/>
+                <ActivityIndicator Color="#666666" IsRunning="{Binding Activitybutton}" IsVisible="{Binding Activitybutton}" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Grid>
 
-            <Label Text="Forget Password?"
+            <StackLayout Padding="15" HorizontalOptions="Center">
+                <Label Text="Forget Password?"
                    HorizontalTextAlignment="Center"
-                   TextColor="White"/>
+                   TextColor="#666666" FontSize="15"/>
+            </StackLayout>
 
             <Label Text="Or Sign in using"
                    HorizontalOptions="CenterAndExpand"
-                   Margin="30"
-                   TextColor="White"
+                   Margin="10"
+                   TextColor="#666666"
                    FontFamily="MyAwesomeCustomFont"
                    FontSize="17"/>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Image Source="facebook.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>
-                <Image Source="twitter.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>
-                <Image Source="gPlus.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30" Margin="10">
+                <ImageButton BackgroundColor="Transparent" Command="{Binding loginwithfacebook}" Source="{local1:ImageResource BoogieApp.Images.facebook.png}" HorizontalOptions="Center" HeightRequest="70" WidthRequest="60"/>
+                <Image Source="{local1:ImageResource BoogieApp.Images.twitter.png}" HorizontalOptions="Center" HeightRequest="70" WidthRequest="60"/>
+                <!--<Image Source="gPlus.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>-->
             </StackLayout>
 
-            <Label HorizontalOptions="Center"
+            <StackLayout Padding="15" HorizontalOptions="Center">
+                <Label HorizontalOptions="Center"
                    Text="Do you have an Account? Register Here"
-                   TextColor="White">
-                <Label.GestureRecognizers>
-                    <ClickGestureRecognizer Clicked="TapGestureRecognizer_Tapped"/>
-                </Label.GestureRecognizers>
-                </Label>
-        </StackLayout>   
+                   TextColor="#666666" FontSize="15"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding registerhere}"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            
+        </StackLayout>
+ 
     </ContentPage.Content>
 </ContentPage>
 

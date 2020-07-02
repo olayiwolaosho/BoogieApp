@@ -27,12 +27,12 @@ namespace BoogieApp.Droid.Controls
                 {
                     //Control.SetBackgroundResource(Resource.Layout.rounded_shape);
                     var gradientDrawable = new GradientDrawable();
-                    gradientDrawable.SetCornerRadius(60f);
+                    gradientDrawable.SetCornerRadius(20f);
                    // gradientDrawable.SetStroke(5, Android.Graphics.Color.DeepPink);
                     gradientDrawable.SetColor(Android.Graphics.Color.White);
                     Control.SetBackground(gradientDrawable);
 
-                    Control.SetPadding(50, Control.PaddingTop, Control.PaddingRight,
+                    Control.SetPadding(40, Control.PaddingTop, Control.PaddingRight,
                         Control.PaddingBottom);
                 }
             }

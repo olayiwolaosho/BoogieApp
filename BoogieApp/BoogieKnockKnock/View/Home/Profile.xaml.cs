@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BoogieApp.BoogieKnockKnock.ViewModels;
+using BoogieApp.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace BoogieApp.BoogieKnockKnock.View.Home
         public Profile()
         {
             InitializeComponent();
+
+            BindingContext = Dependencies.Resolve<ProfileViewModel>();
         }
     }
 }

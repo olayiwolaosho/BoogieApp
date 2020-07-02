@@ -22,7 +22,7 @@
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <!--<Label Text="Wallet Balance" TextColor="{StaticResource PrimaryColor}"  FontAttributes="Bold"
                            Style="{StaticResource AllTexts}" />-->
-                    <Label Text="Gbagada" HorizontalOptions="EndAndExpand" FontSize="14" FontFamily="RamarajaFont" TextColor="{StaticResource PrimaryColor}"/>
+                    <Label Text="{Binding CurrentLocation}" HorizontalOptions="EndAndExpand" FontSize="14" FontFamily="RamarajaFont" TextColor="{StaticResource PrimaryColor}"/>
                 </StackLayout>
                 <!--<Label Text="N0.00" TextColor="{StaticResource PrimaryColor}" FontSize="14" FontFamily="RamarajaFont" FontAttributes="Bold" Margin="0,-10,0,0"/>-->
                
@@ -38,7 +38,7 @@
                         <ViewCell>
                             <Frame HasShadow="True"  CornerRadius="13" BorderColor="Transparent" VerticalOptions="CenterAndExpand" Padding="1" HeightRequest="90">
                                 <Image 
-                               Source="{Binding ImageUrl}" Aspect="Fill"/>
+                               Source="{Binding Themainimage}" Aspect="Fill"/>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>

@@ -1,4 +1,7 @@
-﻿using BoogieApp.BoogieKnockKnock.ViewModels;
+﻿using Autofac;
+using BoogieApp.BoogieFuelme.Model.ResponseObjects;
+using BoogieApp.BoogieKnockKnock.ViewModels;
+using BoogieApp.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,23 +17,29 @@ namespace BoogieApp.BoogieKnockKnock.View
 
     public partial class ShoppingCategories : ContentView
     {
-        ShoppingCategoryViewModel SCVM => BindingContext as ShoppingCategoryViewModel; 
+        private ShoppingCategoryViewModel SCVM;
         public ShoppingCategories()
         {
             InitializeComponent();
-                          
-            BindingContext = new ShoppingCategoryViewModel(this.Navigation);
+            using (var scope = Dependencies.container.BeginLifetimeScope())
+            {
+                SCVM = Dependencies.container.Resolve<ShoppingCategoryViewModel>();
+            }
+            //   RPVM = new RegistrationDataPageViewModel(new NavigationService(),new LocationServices())
+            BindingContext = SCVM;
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if(e.SelectedItem == null)
             {
                 return;
             }
-
-            SCVM.NavigatetofavShop.Execute(sender);
-            ((ListView)sender).SelectedItem = null;
+              ((ListView)sender).SelectedItem = null;
+            var currentcategory = (BoogieApp.BoogieFuelme.Model.ResponseObjects.Datum)e.SelectedItem;
+            await SCVM.NavigatetoShop(currentcategory);
+          
         }
+          
     }
 }

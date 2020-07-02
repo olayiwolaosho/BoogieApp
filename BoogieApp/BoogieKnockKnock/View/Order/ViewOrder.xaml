@@ -10,10 +10,6 @@
              NavigationPage.HasNavigationBar="False"
              Padding="0,15,0,0">
 
-    <ContentPage.BindingContext>
-        <VM:ViewOrderViewModel/>
-    </ContentPage.BindingContext>
-    
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:FirstOrderConverter x:Key="FirstOrderConverter" />

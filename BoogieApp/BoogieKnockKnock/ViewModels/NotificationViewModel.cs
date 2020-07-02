@@ -1,5 +1,6 @@
 ﻿using BoogieApp.BoogieKnockKnock.Models;
 using BoogieApp.BoogieKnockKnock.ViewModels.Base;
+using BoogieApp.GeneralServices.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +12,7 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels
     {
         public ObservableCollection<NotificationModel> Notification { get; set; }
 
-        public NotificationViewModel()
+        public NotificationViewModel(INavigationService navigationService) : base(navigationService)
         {
             Notification = new ObservableCollection<NotificationModel>()
             {

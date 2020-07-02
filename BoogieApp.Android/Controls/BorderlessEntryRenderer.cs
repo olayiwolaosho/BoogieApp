@@ -37,7 +37,7 @@ namespace BoogieApp.Droid.Controls
                     var gradientDrawable = new GradientDrawable();
                     gradientDrawable.SetCornerRadius(10f);
                     // gradientDrawable.SetStroke(5, Android.Graphics.Color.DeepPink);
-                    gradientDrawable.SetColor(Android.Graphics.Color.Rgb(250, 250, 250));
+                    gradientDrawable.SetColor(Android.Graphics.Color.Rgb(255, 255, 255));
                     Control.SetBackground(gradientDrawable);
 
                     Control.SetPadding(50, Control.PaddingTop, Control.PaddingRight,

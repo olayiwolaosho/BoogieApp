@@ -5,117 +5,281 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              xmlns:local="clr-namespace:BoogieApp.Controls" xmlns:customControl="clr-namespace:BoogieApp.Controls.ControlViews"
-              xmlns:local1="clr-namespace:BoogieApp.Images" xmlns:vm="clr-namespace:BoogieApp.BoogieFuelme.ViewModels"
+              xmlns:local1="clr-namespace:BoogieApp.Images" xmlns:myfonts="clr-namespace:BoogieApp.Helpers" 
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.RegistrationPage"
-             BackgroundColor="#52C5FC"
              NavigationPage.HasNavigationBar="False"
-             >
-    <ContentPage.BindingContext>
-        <vm:RegistrationPageViewModel/>
-    </ContentPage.BindingContext>
+             BackgroundColor="White"
+            >
+    <!--<ContentPage.Content>
+        <StackLayout Padding="40" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="400">
+            <Entry Placeholder="Full Name*" WidthRequest="300" BackgroundColor="WhiteSmoke" Margin="110"/>
+            <Entry Placeholder="Phone Number" WidthRequest="300" Margin="10" BackgroundColor="WhiteSmoke"/>
+            <Entry Placeholder="Email Address" WidthRequest="300" Margin="10" BackgroundColor="WhiteSmoke"/>
+            <Entry Placeholder="Password" IsPassword="True" WidthRequest="300" Margin="10" BackgroundColor="WhiteSmoke"/>
+            <Entry Placeholder="Confirm Password" IsPassword="True" Margin="10" BackgroundColor="WhiteSmoke"/>
+            <Button Text="Submit" BackgroundColor="Blue" TextColor="White" CornerRadius="5" Margin="10"/>
+        </StackLayout>
+       
+    </ContentPage.Content>-->
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style TargetType="{x:Type local:TransparentEntry}" x:Key="myentry">
-                <Setter Property="HeightRequest" Value="55"/>
-                <Setter Property="Margin" Value="0,0,0,10"/>
-                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
-                <Setter Property="PlaceholderColor" Value="LightGray"/>
+            <Style TargetType="{x:Type local:BorderlessEntry}" x:Key="myentry">
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="Margin" Value="5,5,5,5"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="PlaceholderColor" Value="#666666"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="17"/>
             </Style>
             
             <Style TargetType="{x:Type local:WhitePicker}" x:Key="mypicker">
                 <Setter Property="HeightRequest" Value="55"/>
                 <Setter Property="Margin" Value="0,0,0,10"/>
-                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
-                <Setter Property="TextColor" Value="LightGray"/>
-                <Setter Property="TitleColor" Value="LightGray"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="TextColor" Value="{Binding Addresscolor}"/>
+                <Setter Property="TitleColor" Value="#666666"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
             <Style TargetType="{x:Type Frame}" x:Key="myframe">
                 <Setter Property="HeightRequest" Value="15"/>
                 <Setter Property="CornerRadius" Value="25"/>
-                <Setter Property="Margin" Value="0,0,0,10"/>
-                <!--<Setter Property="Padding" Value="1"/>-->
+                <Setter Property="Margin" Value="10,0,0,10"/>
+                <Setter Property="Padding" Value="1"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="White"/>
             </Style>
             
             <Style TargetType="{x:Type Label}" x:Key="mylabel">
                 <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
-            
+
+            <Style TargetType="{x:Type Frame}" x:Key="mystack">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="Padding" Value="0,0,15,0"/>
+                <Setter Property="Margin" Value="15"/>
+                <Setter Property="BorderColor" Value="#666666"/>
+                <Setter Property="CornerRadius" Value="7"/>
+            </Style>
+
             <Style TargetType="{x:Type Label}" x:Key="Addresslabel">
-                <Setter Property="TextColor" Value="LightGray"/>
-                <Setter Property="Margin" Value="-15"/>
                 <Setter Property="FontSize" Value="18"/>
-                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
-                <Setter Property="Padding" Value="30,6,0,0"/>
-                <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Padding" Value="10,3,0,0"/>
+                <Setter Property="FontFamily" Value="RajdhaniReg"/>
+                <Setter Property="TextColor" Value="{Binding Addresscolor}"/>
             </Style>
-            
+
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons"/>
+            </OnPlatform>
         </ResourceDictionary> 
     </ContentPage.Resources>
     
     <customControl:BottomSheet
-        PercentageHeightMainPage="1" 
+        PercentageHeightMainPage="1.1" 
         IsBottomButtonEnable="False"
         PercentageLockMainPageTranslation=".3"
         PercentageHideBottomSheet=".7"
-        PercentageExpandBottomSheet=".7"
+        PercentageExpandBottomSheet=".6"
         MinPercentageBottomSheetSwipe=".95"
         MaxPercentageBottomSheetSwipe="-0.03"
         CornerRadiusBottomSheet="25"
         BackgroundBottomSheetColor="White"
         BottomButtonText="Expand"
-        IsFrameEnabled="False"
+        IsFrameEnabled="True"
         x:Name="bottom"
         >
         <customControl:BottomSheet.ContentMainPage>
-            <StackLayout Padding="15">
-                <ImageButton Source="{local1:ImageResource BoogieApp.Images.back.png}" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"/>
-                <Label Text="Create an Account" HorizontalOptions="Center" TextColor="White" FontSize="20"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Padding="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsNotBusy}">
+                    <!--<ImageButton Source="{local1:ImageResource BoogieApp.Images.back.png}" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"/>-->
+                    <Label Text="Sign up" HorizontalOptions="Center" FontSize="25" TextColor="#666666" FontFamily="RajdhaniSem"/>
+                    <ImageButton Source="{local1:ImageResource BoogieApp.Images.Boogielogo2.png}" BackgroundColor="White" HorizontalOptions="Center" WidthRequest="170"/>
+                    
+                    
+                    <StackLayout Padding="5,0" Spacing="-20">
+                        <Frame Style="{StaticResource mystack}">
+                            <StackLayout Orientation="Horizontal">
+                                <local:BorderlessEntry Text="{Binding Username}" Placeholder="Full Name*" Style="{StaticResource myentry}"/>
+                                <Image Source="{local1:ImageResource BoogieApp.Images.user.png}" />
+                            </StackLayout>
+                            <!--<Label Text="Full Name"  Style="{StaticResource mylabel}"/>-->
+                        </Frame>
 
-                <StackLayout Padding="40,0">
-                    <Label Text="Full Name"  Style="{StaticResource mylabel}"/>
-                    <local:TransparentEntry Text="{Binding FullName}" Placeholder="Name" Style="{StaticResource myentry}"/>
-
-                    <Label Text="Email" Style="{StaticResource mylabel}"/>
-                    <local:TransparentEntry Placeholder="Email" Text="{Binding Email}" Style="{StaticResource myentry}"/>
-
-                    <Label Text="Password" Style="{StaticResource mylabel}"/>
-                    <local:TransparentEntry Placeholder="Password" Text="{Binding Password}" IsPassword="True" Style="{StaticResource myentry}"/>
-
-                    <Label Text="Phonenumber" Style="{StaticResource mylabel}"/>
-                    <local:TransparentEntry Placeholder="Phonenumber (08011235964)" Text="{Binding Phoneno}" Keyboard="Numeric" Style="{StaticResource myentry}"/>
-
-                    <Label Text="Location" Style="{StaticResource mylabel}"/>
-                    <Frame Style="{StaticResource myframe}">
-                        <local:WhitePicker Title="Select a location" ItemsSource="{Binding Locations}" SelectedItem="{Binding LocationSelected, Mode=TwoWay}"  Margin="-17" Style="{StaticResource  mypicker}"/>
-                    </Frame>
+                        <Frame Style="{StaticResource mystack}">
+                            <StackLayout Orientation="Horizontal">
+                                <!--<Label Text="Email" Style="{StaticResource mylabel}"/>-->
+                                <local:BorderlessEntry Placeholder="Email" Text="{Binding Useremail}" Style="{StaticResource myentry}"/>
+                                <Image Source="{local1:ImageResource BoogieApp.Images.mail.png}"/>
+                            </StackLayout>
+                        </Frame>
 
 
-                    <Label Text="Address" Style="{StaticResource mylabel}"/>
-                    <Frame Style="{StaticResource myframe}">
-                        <Label Text="Addresss" Style="{StaticResource Addresslabel}">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                    </Frame>
+                        <Frame Style="{StaticResource mystack}">
+                            <StackLayout Orientation="Horizontal">
+                                <!--<Label Text="Password" Style="{StaticResource mylabel}"/>-->
+                                <local:BorderlessEntry Placeholder="Password" Text="{Binding Userpasswords}" IsPassword="True" Style="{StaticResource myentry}"/>
+                                <Image Source="{local1:ImageResource BoogieApp.Images.lock.png}"/>
+                            </StackLayout>
+                        </Frame>
 
-                    <Label Text="By creating an account you agree to our terms of services and privacy policy" HorizontalTextAlignment="Center" TextColor="White"/>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source=""/>
-                        <Image Source=""/>
-                        <Image Source=""/>
+                        <Frame Style="{StaticResource mystack}">
+                            <StackLayout Orientation="Horizontal">
+                                <!--<Label Text="Phonenumber" Style="{StaticResource mylabel}"/>-->
+                                <local:BorderlessEntry Placeholder="Mobilenumber (08011235964)" Text="{Binding Usermobile}" Keyboard="Numeric" Style="{StaticResource myentry}"/>
+                                <Image Source="{local1:ImageResource BoogieApp.Images.smartphone.png}"/>
+                            </StackLayout>
+                        </Frame>
+
+
+                        <Frame BorderColor="#666666" Margin="17" Padding="4" CornerRadius="7">
+                            <StackLayout BackgroundColor="White" Orientation="Horizontal" Padding="13,-2" HeightRequest="50">
+                                <!--<Label Text="Address" Style="{StaticResource mylabel}"/>-->
+                                <Label Text="{Binding Useraddress}" Style="{StaticResource Addresslabel}"/>
+                                <Image Source="{local1:ImageResource BoogieApp.Images.address.png}"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+
+
+                        <Frame BorderColor="#666666" Margin="17" Padding="4" CornerRadius="7">
+                            <StackLayout BackgroundColor="White" Orientation="Horizontal" Padding="-5,0,13,0" HeightRequest="50">
+                                <!--<Label Text="Location" Style="{StaticResource mylabel}"/>-->
+                                <local:WhitePicker Title="Select a location" ItemsSource="{Binding MyLocations}" ItemDisplayBinding="{Binding LocationName}" SelectedItem="{Binding LocationSelected, Mode=TwoWay}"  Style="{StaticResource  mypicker}"/>
+                                <Image Source="{local1:ImageResource BoogieApp.Images.down.png}"/>
+                            </StackLayout>
+                        </Frame>
+
+
+                        <Label Text="By creating an account you agree to our terms of services and privacy policy" HorizontalTextAlignment="Center" TextColor="#666666" Margin="20" />
+
+                        <Grid Margin="70,20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Button Text="Submit" TextColor="#7F7F7F" FontSize="17" CornerRadius="13" Padding="70,0,70,0" BackgroundColor="#91D8F7" Command="{Binding PhoneAuth}" IsVisible="{Binding Visiblebutton}" HorizontalOptions="Center"/>
+                            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ButtonActivity}" IsRunning="{Binding ButtonActivity}" Color="White"/>
+                        </Grid>
+                        
                     </StackLayout>
-                    <Button Text="->" TextColor="White" FontSize="20" CornerRadius="30" Padding="15" BackgroundColor="Blue" Command="{Binding PhoneAuth}"/>
+
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
 
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
-                </StackLayout.GestureRecognizers>
-            </StackLayout>
+                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="White"/>
+
+                
+                <!--//Verification View-->
+                <!--<StackLayout Margin="0,10,0,0" IsVisible="{Binding BusyLayout}">
+
+                    <Image Source="IconColor.png" HorizontalOptions="Start" Margin="15,15,10,10">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                            NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center">
+                        <Image Source="GroupVerify.png" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,30,0,0"/>
+
+                    </StackLayout>
+
+
+                    <StackLayout Margin="0,35,0,0">
+
+                        <FlexLayout Direction="Column">
+
+                            <Label Text="Verification" TextColor="#2C2C2C" FontAttributes="Bold" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+                            <Label Text="Enter the 4 digit code sent to your phone number" Margin="10" TextColor="#7F7F7F" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                        </FlexLayout>
+
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="20,20,20,0">
+
+
+                        <Grid >
+
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="2*" />
+
+                                <ColumnDefinition Width="2*"/>
+
+                                <ColumnDefinition Width="2*"/>
+
+                                <ColumnDefinition Width="2*"/>
+
+                            </Grid.ColumnDefinitions>
+
+
+                            <Entry x:Name="firstKey" TextChanged="OnChange" ReturnType="Next" HorizontalOptions="FillAndExpand" Keyboard="Numeric" StyleClass="hhd"  MaxLength="1"  Grid.Column="0" Text="{Binding Firsttext,Mode=TwoWay}"/>
+
+                            <Entry x:Name="secondKey" TextChanged="OnChangeTwo" ReturnType="Next" HorizontalOptions="FillAndExpand"  Keyboard="Numeric" MaxLength="1"  Grid.Column="1" Text="{Binding Secondtext,Mode=TwoWay}"/>
+
+                            <Entry x:Name="thirdkey" TextChanged="OnChangeThree" ReturnType="Next" HorizontalOptions="FillAndExpand"  Keyboard="Numeric" MaxLength="1"  Grid.Column="2" Text="{Binding Thirdtext,Mode=TwoWay}"/>
+
+                            <Entry x:Name="foruthkey"  ReturnType="Done" HorizontalOptions="FillAndExpand"  Keyboard="Numeric"  MaxLength="1" Grid.Column="3" Text="{Binding Fourthtext,Mode=TwoWay}"/>
+
+
+                        </Grid>
+
+
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" Margin="0,8,0,4">
+
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OnClear}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+
+                        <Label Text="Clear Token" FontSize="14" FontAttributes="Bold" />
+
+                    </StackLayout>
+
+
+                    <StackLayout Margin="20,20,20,0">
+
+                        <Button BackgroundColor="White" Text="VERIFY" TextColor="#52C5FC" CornerRadius="10" FontAttributes="Bold" Command="{Binding Verify}"/>
+
+                        <StackLayout x:Name="loadingact" IsVisible="False">
+                            <ActivityIndicator IsVisible="True" IsRunning="True" IsEnabled="True"></ActivityIndicator>
+                        </StackLayout>
+
+                        <Label x:Name="timercontrol" TextColor="#27D9A9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,20,0,0">
+                            <Label.GestureRecognizers>
+
+                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                </StackLayout>-->
+            </Grid>
+            
         </customControl:BottomSheet.ContentMainPage>
         <customControl:BottomSheet.ContentBottomSheet>
             <Grid VerticalOptions="FillAndExpand"
@@ -154,6 +318,7 @@
                         ItemsSource="{Binding Places}"
                         HasUnevenRows="true"
                         SeparatorColor="Gray"
+                          ItemSelected="list_ItemSelected"
                         ios:ListView.SeparatorStyle="FullWidth">
                     <ListView.Triggers>
                         <DataTrigger TargetType="ListView"
@@ -216,80 +381,6 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-            <!--<StackLayout x:Name="GridFilter">
-                <SearchBar x:Name="SearchBox" BackgroundColor="Transparent" Focused="SearchBox_Focused" Placeholder="Enter an address"/>
-                <ListView VerticalOptions="FillAndExpand"
-                        BackgroundColor="Transparent"
-                        Grid.Row="2"
-                        Footer=""
-                        SelectedItem="{Binding PlaceSelected, Mode=TwoWay}"
-                        x:Name="list"
-                        ItemsSource="{Binding Places}"
-                        HasUnevenRows="true"
-                        SeparatorColor="Gray"
-                        ios:ListView.SeparatorStyle="FullWidth">
-                    <ListView.Triggers>
-                        <DataTrigger TargetType="ListView"
-                                 Binding="{Binding ShowRecentPlaces}"
-                                 Value="True">
-                            <Setter Property="ItemsSource" Value="{Binding RecentPlaces}" />
-                        </DataTrigger>
-                        <DataTrigger TargetType="ListView"
-                                 Binding="{Binding ShowRecentPlaces}"
-                                 Value="False">
-                            <Setter Property="ItemsSource" Value="{Binding Places}" />
-                        </DataTrigger>
-                    </ListView.Triggers>
-                    <ListView.Header>
-                        <StackLayout  x:Name="recentSearchText"
-                                      IsVisible="{Binding ShowRecentPlaces}">
-                            <Label LineBreakMode="WordWrap"
-                                 FontAttributes="Bold"
-                                 Margin="20,10"
-                                 x:Name="recentSearch"
-                                 Text="History"/>
-                        </StackLayout>
-                    </ListView.Header>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Grid Padding="15"
-                                      RowSpacing="2"
-                                      ColumnSpacing="15">
-
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Image Source="ic_location"
-                                             HeightRequest="20"
-                                             WidthRequest="20"
-                                             VerticalOptions="Start"
-                                             Grid.Row="0"
-                                             Grid.Column="0"
-                                             Grid.RowSpan="2"/>
-
-                                    <Label LineBreakMode="MiddleTruncation"
-                                               Text="{Binding StructuredFormatting.MainText}"
-                                               Grid.Row="0"
-                                               Grid.Column="1"/>
-
-                                    <Label LineBreakMode="MiddleTruncation"
-                                                 Text="{Binding StructuredFormatting.SecondaryText}" 
-                                                 TextColor="Gray" 
-                                                 Grid.Row="1"
-                                                 Grid.Column="1"/>
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>-->
         </customControl:BottomSheet.ContentBottomSheet>
     </customControl:BottomSheet>
 </ContentPage>

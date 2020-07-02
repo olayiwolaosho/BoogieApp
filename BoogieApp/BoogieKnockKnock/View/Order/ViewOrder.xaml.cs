@@ -1,4 +1,5 @@
 ﻿using BoogieApp.BoogieKnockKnock.ViewModels;
+using BoogieApp.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,13 @@ namespace BoogieApp.BoogieKnockKnock.View.Order
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ViewOrder : ContentPage
     {
-        ViewOrderViewModel SCVM => BindingContext as ViewOrderViewModel;
+        private ViewOrderViewModel SCVM;
         public ViewOrder()
         {
             InitializeComponent();
+
+            SCVM = Dependencies.Resolve<ViewOrderViewModel>();
+            BindingContext = SCVM;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

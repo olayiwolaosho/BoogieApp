@@ -6,10 +6,6 @@
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieKnockKnock.View.Order.OrderDetail"
              NavigationPage.HasNavigationBar="False">
-
-    <ContentPage.BindingContext>
-        <VM:ViewOrderViewModel/>
-    </ContentPage.BindingContext>
     
     <ContentPage.Resources>
         <ResourceDictionary>

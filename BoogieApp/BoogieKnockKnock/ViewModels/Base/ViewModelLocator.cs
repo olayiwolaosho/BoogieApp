@@ -3,24 +3,21 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 using System.Text;
-using TinyIoC;
 using Xamarin.Forms;
 
 namespace BoogieApp.BoogieKnockKnock.ViewModels.Base
 {
     public static class ViewModelLocator
     {
-        private static TinyIoCContainer _container;
 
          static ViewModelLocator()
         {
-            _container = new TinyIoCContainer();
 
 
             // View models - by default, TinyIoC will register concrete classes as multi-instance.
-            _container.Register<ProfileViewModel>();
-            _container.Register<NotificationViewModel>();
-            _container.Register<ProfileViewModel>();
+            //_container.Register<ProfileViewModel>();
+            //_container.Register<NotificationViewModel>();
+            //_container.Register<ProfileViewModel>();
            
         }
 
@@ -55,8 +52,8 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels.Base
             {
                 return;
             }
-            var viewModel = _container.Resolve(viewModelType);
-            view.BindingContext = viewModel;
+           // var viewModel = _container.Resolve(viewModelType);
+           // view.BindingContext = viewModel;
         }
 
     }

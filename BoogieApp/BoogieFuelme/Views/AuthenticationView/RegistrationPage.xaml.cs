@@ -1,4 +1,7 @@
-﻿using BoogieApp.BoogieFuelme.ViewModels;
+﻿using Autofac;
+using BoogieApp.BoogieFuelme.ViewModels;
+using BoogieApp.DependencyInjection;
+using BoogieApp.GeneralServices.Location;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,18 +18,31 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
     public partial class RegistrationPage : ContentPage
     {
         int count = 0;
-        RegistrationPageViewModel RPVM => BindingContext as RegistrationPageViewModel;  
+        private RegistrationDataPageViewModel RPVM;
         public static readonly BindableProperty FocusOriginCommandProperty =
            BindableProperty.Create(nameof(FocusOriginCommand), typeof(ICommand), typeof(RegistrationPage), null, BindingMode.TwoWay);
         public RegistrationPage()
         {
             InitializeComponent();
 
-              MessagingCenter.Subscribe<RegistrationPageViewModel,ObservableCollection<Model.GooglePlaceAutoCompletePrediction>>(this, "Place", (sender,args) =>
+            using (var scope = Dependencies.container.BeginLifetimeScope())
+            {
+                RPVM = Dependencies.container.Resolve<RegistrationDataPageViewModel>();
+            }
+            //   RPVM = new RegistrationDataPageViewModel(new NavigationService(),new LocationServices())
+            BindingContext = RPVM;
+
+            MessagingCenter.Subscribe<RegistrationPageViewModel,ObservableCollection<Model.GooglePlaceAutoCompletePrediction>>(this, "Place", (sender,args) =>
               {
-                  list.ItemsSource = args;
+                  //list.ItemsSource = args;
               });
            
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await RPVM.Getalllocatio();
         }
 
         public ICommand FocusOriginCommand
@@ -46,7 +62,7 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
 
         void OnOriginFocus()
         {
-            originEntry.Focus();
+            //originEntry.Focus();
         }
 
         void SearchBox_Focused(object sender, FocusEventArgs e)
@@ -64,18 +80,64 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            bottom.IsFrameEnabled = true;
+            //bottom.IsFrameEnabled = true;
             MessagingCenter.Send(this, "Expand");
          //   bottomSheet.IsVisible = true;
         }
 
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
-          //  bottom.PercentageHideBottomSheet = 0.1;
             MessagingCenter.Send(this, "Close");
-          //  bottom.PercentageHideBottomSheet = 0.7;
-            //bottomSheet.IsVisible = false;
+            count = 0;
         }
 
+        //Verification view
+        //private void OnChange(Object sender, EventArgs e)
+        //{
+
+        //    if (firstKey.Text.Length > 0)
+        //    {
+
+        //        secondKey.Focus();
+
+        //    }
+
+        //}
+
+        //private void OnChangeTwo(Object sender, EventArgs e)
+        //{
+
+
+        //    if (secondKey.Text.Length > 0)
+        //    {
+
+        //        thirdkey.Focus();
+
+        //    }
+
+        //}
+
+        //private void OnChangeThree(Object sender, EventArgs e)
+        //{
+
+
+        //    if (thirdkey.Text.Length > 0)
+        //    {
+
+        //        foruthkey.Focus();
+
+        //    }
+
+        //}
+
+        private void list_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem == null)
+            {
+                return;
+            }
+
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }

@@ -9,17 +9,17 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout  BackgroundColor="#52C5FC" Padding="10">
+            <!--<StackLayout  BackgroundColor="#52C5FC" Padding="10">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Boogie Wallet Balance" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
                     <Image Source="{local:ImageResource BoogieApp.Images.add.png}" HeightRequest="25" WidthRequest="29"/>
                     <Image Source="{local:ImageResource BoogieApp.Images.bell.png}" HeightRequest="28" WidthRequest="31" HorizontalOptions="EndAndExpand"/>
                 </StackLayout>
                 <Label Text="N0.00" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
-            </StackLayout>
+            </StackLayout>-->
 
-            <Image Source="{local:ImageResource BoogieApp.Images.Boogielogo.png}" Grid.Row="1" HorizontalOptions="CenterAndExpand" HeightRequest="75" WidthRequest="189"/>
-            <Label Text="How do you want to place your order in ***" HorizontalOptions="CenterAndExpand" FontFamily="RamarajaFont" FontSize="20"/>
+            <!--<Image Source="{local:ImageResource BoogieApp.Images.Boogielogo.png}" Grid.Row="1" HorizontalOptions="CenterAndExpand" HeightRequest="75" WidthRequest="189"/>
+            <Label Text="How do you want to place your order in ***" HorizontalOptions="CenterAndExpand" FontFamily="RamarajaFont" FontSize="20"/>-->
 
 
             <Grid>
@@ -38,28 +38,44 @@
                         <Label Text="List Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
                         <Label Text="Send us a list of items you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ListOrder}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
+                
                 <Frame Grid.Row="0" Grid.Column="1">
                     <StackLayout>
                         <Image/>
                         <Label Text="Voice Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
                         <Label Text="Record a voicenote telling us what you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding VoiceOrder}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
+                
                 <Frame Grid.Row="1" Grid.Column="0">
                     <StackLayout>
                         <Image/>
                         <Label Text="Picture Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
                         <Label Text="Record a voicenote telling us what you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PictureOrder}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
+                
                 <Frame Grid.Row="1" Grid.Column="1">
                     <StackLayout>
                         <Image/>
                         <Label Text="Whatsapp Order" FontFamily="RamarajaFont" HorizontalOptions="Center" TextColor="#52C5FC"/>
                         <Label Text="Record a voicenote telling us what you want to order" FontFamily="RamarajaFont" HorizontalOptions="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding WhatsappOrder}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
+                
             </Grid>
         </StackLayout>
     </ContentPage.Content>

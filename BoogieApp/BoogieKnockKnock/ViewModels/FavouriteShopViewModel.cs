@@ -1,80 +1,97 @@
 ﻿using BoogieApp.BoogieKnockKnock.Models;
 using BoogieApp.BoogieKnockKnock.View.ShoppingViews.Order;
+using BoogieApp.BoogieKnockKnock.ViewModels.Base;
+using BoogieApp.GeneralServices.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace BoogieApp.BoogieKnockKnock.ViewModels
 {
-    class FavouriteShopViewModel
+    class FavouriteShopViewModel : BaseViewModel
     {
-        private INavigation navigation;
         public ObservableCollection<FavouriteShopModel> favouriteShops { get; set; }
 
-        public FavouriteShopViewModel(INavigation navigation)
+        public ObservableCollection<StoresResponseObjects.Datum> StoresModels = new ObservableCollection<StoresResponseObjects.Datum>();
+        public ObservableCollection<StoresResponseObjects.Datum> storesModels
         {
-            this.navigation = navigation;
-            favouriteShops = new ObservableCollection<FavouriteShopModel>()
-           {
-               new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+            get => StoresModels;
+            set
+            {
+                StoresModels = value;
+                RaisePropertyChanged(() => storesModels);
+            }
+        }
 
-               },
-               new FavouriteShopModel()
-               {
-                   Title = "Grocery",
-                   ImageUrl = "Grocery.jpg",
+        public FavouriteShopViewModel(INavigationService navigationService) : base(navigationService)
+        {
+           // favouriteShops = new ObservableCollection<FavouriteShopModel>()
+           //{
+           //    new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
 
-               },
-                new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+           //    },
+           //    new FavouriteShopModel()
+           //    {
+           //        Title = "Grocery",
+           //        ImageUrl = "Grocery.jpg",
 
-               },
-               new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+           //    },
+           //     new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
 
-               },
+           //    },
+           //    new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
+
+           //    },
                 
-               new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+           //    new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
 
-               },   
-               new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+           //    },   
+           //    new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
 
-               },
+           //    },
                 
-                new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+           //     new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
 
-               },
-                new FavouriteShopModel()
-               {
-                   Title = "Home Affairs Supermarket",
-                   ImageUrl = "Grocery.jpg",
+           //    },
+           //     new FavouriteShopModel()
+           //    {
+           //        Title = "Home Affairs Supermarket",
+           //        ImageUrl = "Grocery.jpg",
 
-               },
-           };
+           //    },
+           //};
         }
 
         public ICommand NavigatetofavShop => new Command(async () =>
         {
-           await navigation.PushAsync(new PlaceOrderView());
+           await _navigationService.NavigateToPageAsync<Page>(new PlaceOrderView());
         });
+
+        public async Task Viewshops(StoresResponseObjects.Datum[] args)
+        {
+            storesModels = new ObservableCollection<StoresResponseObjects.Datum>(args);
+        }
     }
 }

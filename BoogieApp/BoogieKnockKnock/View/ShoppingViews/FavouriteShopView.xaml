@@ -29,7 +29,7 @@
                 <Label Text="Adverts will be placed here" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="15" VerticalOptions="CenterAndExpand" FontFamily="RamarajaFont"/>
             </Frame>
 
-            <ListView Grid.Row="2" ItemsSource="{Binding favouriteShops}" SeparatorVisibility="None" RowHeight="165" Margin="10,0,10,0" ItemSelected="ListView_ItemSelected">
+            <ListView Grid.Row="2" ItemsSource="{Binding storesModels}" SeparatorVisibility="None" RowHeight="165" Margin="10,0,10,0" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -37,7 +37,7 @@
                                 <StackLayout>
                                     <Frame Padding="0,0,0,0" HeightRequest="150" CornerRadius="10">
                                         <Image Grid.RowSpan="2"
-                               Source="{Binding ImageUrl}" 
+                               Source="{Binding Themainimage}" 
                                Aspect="AspectFill"
                                HeightRequest="60" 
                                WidthRequest="60" />

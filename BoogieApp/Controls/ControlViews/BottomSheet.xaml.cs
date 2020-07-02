@@ -72,15 +72,14 @@ namespace BoogieApp.Controls.ControlViews
 
         private void CloseExpandsheet()
         {
-            var translationY = (frame.TranslationY - (Height - Height * PercentageExpandBottomSheet)) - CornerRadiusBottomSheet;
+            var ytrans = (Height * (1 - PercentageHeightMainPage)) + CornerRadiusBottomSheet;
+            frame.TranslateTo(0, ytrans, 300, Easing.BounceOut);
+            y = ytrans;
             RelativeLayout.SetHeightConstraint(contentview, Constraint.RelativeToParent((parent) =>
             {
-                return parent.Height * PercentageExpandBottomSheet;
+                return parent.Height;
             }));
-
-            frame.TranslateTo(frame.X, translationY, 10, Easing.BounceIn);
-            y = translationY;
-            expandeButton.FadeTo(0, 100, Easing.CubicOut);
+            expandeButton.FadeTo(1, 500, Easing.CubicIn);
         }
 
 

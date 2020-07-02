@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.Verification"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <StackLayout Margin="0,10,0,0">
+
+            <Image Source="IconColor.png" HorizontalOptions="Start" Margin="15,15,10,10">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+                           
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center">
+                <!-- top controls -->
+                <Image Source="GroupVerify.png" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,30,0,0"/>
+
+            </StackLayout>
+
+
+            <StackLayout Margin="0,35,0,0">
+
+                <FlexLayout Direction="Column">
+
+                    <Label Text="Verification" TextColor="#2C2C2C" FontAttributes="Bold" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Enter the 4 digit code sent to your phone number" Margin="10" TextColor="#7F7F7F" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                </FlexLayout>
+
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="20,20,20,0">
+
+
+                <Grid >
+
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="2*" />
+
+                        <ColumnDefinition Width="2*"/>
+
+                        <ColumnDefinition Width="2*"/>
+
+                        <ColumnDefinition Width="2*"/>
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <Entry x:Name="firstKey" TextChanged="OnChange" ReturnType="Next" HorizontalOptions="FillAndExpand" Keyboard="Numeric" StyleClass="hhd"  MaxLength="1"  Grid.Column="0" Text="{Binding Firsttext,Mode=TwoWay}"/>
+
+                    <Entry x:Name="secondKey" TextChanged="OnChangeTwo" ReturnType="Next" HorizontalOptions="FillAndExpand"  Keyboard="Numeric" MaxLength="1"  Grid.Column="1" Text="{Binding Secondtext,Mode=TwoWay}"/>
+
+                    <Entry x:Name="thirdkey" TextChanged="OnChangeThree" ReturnType="Next" HorizontalOptions="FillAndExpand"  Keyboard="Numeric" MaxLength="1"  Grid.Column="2" Text="{Binding Thirdtext,Mode=TwoWay}"/>
+
+                    <Entry x:Name="foruthkey"  ReturnType="Done" HorizontalOptions="FillAndExpand"  Keyboard="Numeric"  MaxLength="1" Grid.Column="3" Text="{Binding Fourthtext,Mode=TwoWay}"/>
+
+
+                </Grid>
+
+
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Margin="0,8,0,4">
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                                                                                      
+                <Label Text="Clear Token" FontSize="14" FontAttributes="Bold" />
+
+            </StackLayout>
+
+
+            <StackLayout Margin="20,20,20,0">
+
+                <Button BackgroundColor="White" Text="VERIFY" TextColor="#52C5FC" CornerRadius="10" FontAttributes="Bold" Command="{Binding Verify}"/>
+
+                <StackLayout x:Name="loadingact" IsVisible="False">
+                    <ActivityIndicator IsVisible="True" IsRunning="True" IsEnabled="True"></ActivityIndicator>
+                </StackLayout>
+
+                <Label x:Name="timercontrol" TextColor="#27D9A9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,20,0,0">
+                    <Label.GestureRecognizers>
+
+                        <TapGestureRecognizer NumberOfTapsRequired="1" />
+
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

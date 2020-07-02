@@ -1,4 +1,6 @@
-﻿using BoogieApp.BoogieKnockKnock.ViewModels.SharpnadoViewModel;
+﻿using Autofac;
+using BoogieApp.BoogieKnockKnock.ViewModels.SharpnadoViewModel;
+using BoogieApp.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +15,21 @@ namespace BoogieApp.BoogieKnockKnock.View.SharpnadoPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Bottomtabbedpage : ContentPage
     {
+        private BottomtabbedpageViewModel RPVM;
         public Bottomtabbedpage()
         {
             InitializeComponent();
+            using (var scope = Dependencies.container.BeginLifetimeScope())
+            {
+                RPVM = Dependencies.container.Resolve<BottomtabbedpageViewModel>();
+            }
+            BindingContext = RPVM;
+        }
 
-            BindingContext = new BottomtabbedpageViewModel();
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await RPVM.GetCategory();
         }
     }
 }

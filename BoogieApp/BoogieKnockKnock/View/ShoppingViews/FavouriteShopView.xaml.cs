@@ -1,4 +1,7 @@
-﻿using BoogieApp.BoogieKnockKnock.ViewModels;
+﻿using Autofac;
+using BoogieApp.BoogieKnockKnock.ViewModels;
+using BoogieApp.DependencyInjection;
+using StoresResponseObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +16,26 @@ namespace BoogieApp.BoogieKnockKnock.View.ShoppingViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FavouriteShopView : ContentPage
     {
-        FavouriteShopViewModel FSVM => BindingContext as FavouriteShopViewModel;
+        FavouriteShopViewModel FSVM;
 
-        public FavouriteShopView()
+        StoresResponseObjects.Datum[] storesResponse;
+
+        public FavouriteShopView(StoresResponseObjects.Datum[] storesResponse)
         {
             InitializeComponent();
+            using (var scope = Dependencies.container.BeginLifetimeScope())
+            {
+                FSVM = Dependencies.container.Resolve<FavouriteShopViewModel>();
+            }
+            //   RPVM = new RegistrationDataPageViewModel(new NavigationService(),new LocationServices())
+            BindingContext = FSVM;
+            this.storesResponse = storesResponse;
+        }
 
-            BindingContext = new FavouriteShopViewModel(this.Navigation);
+        protected async override void OnAppearing()
+        {
+            await FSVM.Viewshops(storesResponse);
+            base.OnAppearing();
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

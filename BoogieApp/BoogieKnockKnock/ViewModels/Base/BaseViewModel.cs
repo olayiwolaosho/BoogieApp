@@ -1,4 +1,4 @@
-﻿using BoogieApp.BoogieKnockKnock.Services.Navigation;
+﻿using BoogieApp.GeneralServices.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels.Base
     public abstract class BaseViewModel : ExtendedBindableObject
     {
 
-        protected readonly INavigationService NavigationService;
+        protected readonly INavigationService _navigationService;
 
 
         private bool _isBusy;
@@ -27,9 +27,9 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels.Base
             }
         }
 
-        public BaseViewModel()
+        public BaseViewModel(INavigationService navigationService)
         {
-          //  NavigationService = ViewModelLocator.Resolve<INavigationService>();
+            this._navigationService = navigationService;
         }
     }
 }

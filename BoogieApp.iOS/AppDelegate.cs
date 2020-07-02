@@ -24,6 +24,7 @@ namespace BoogieApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Forms.FormsMaterial.Init();
             SharpnadoInitializer.Initialize();
             Xamarin.FormsMaps.Init();
             LoadApplication(new App());

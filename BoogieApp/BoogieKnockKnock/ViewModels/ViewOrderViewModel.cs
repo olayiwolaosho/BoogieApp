@@ -1,6 +1,7 @@
 ﻿using BoogieApp.BoogieKnockKnock.Models;
 using BoogieApp.BoogieKnockKnock.View.Order;
 using BoogieApp.BoogieKnockKnock.ViewModels.Base;
+using BoogieApp.GeneralServices.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +15,7 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels
     {
         public ObservableCollection<Order> order { get; set; }
         public ObservableCollection<Order> vieworder { get; set; }
-        public ViewOrderViewModel()
+        public ViewOrderViewModel(INavigationService navigationService) :base(navigationService)
         {
             order = new ObservableCollection<Order>
            {

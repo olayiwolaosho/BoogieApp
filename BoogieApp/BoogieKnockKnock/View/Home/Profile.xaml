@@ -9,10 +9,7 @@
               viewModelBase:ViewModelLocator.AutoWireViewModel="true"
              Padding="0,10,0,0">
 
-    <ContentView.BindingContext>
-        <VM:ProfileViewModel/>
-    </ContentView.BindingContext>
-        
+   
     <ContentView.Resources>
         <ResourceDictionary>
             
