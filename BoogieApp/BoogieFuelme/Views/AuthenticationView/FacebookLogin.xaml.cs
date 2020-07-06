@@ -21,7 +21,12 @@ namespace BoogieApp.BoogieFuelme.Views.AuthenticationView
             var apiRequest =
                "https://www.facebook.com/dialog/oauth?client_id="
                + Constant.ClientId
-               + "&display=popup&response_type=token&redirect_uri=http://www.facebook.com/connect/login_success.html";
+               + "&display=popup&response_type=token&redirect_uri=https://www.facebook.com/connect/login_success.html";
+
+            //var apiRequest =
+            //     "https://www.facebook.com/v7.0/dialog/oauth?client_id="
+            //     + Constant.ClientId + "&display=popup & response_type = token" + "&redirect_uri =https://www.facebook.com/connect/login_success.html" +
+            // "&state ={st=state123abc,ds=123456789}";
 
             var webView = new WebView
             {

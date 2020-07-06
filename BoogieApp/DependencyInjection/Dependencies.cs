@@ -23,7 +23,7 @@ namespace BoogieApp.DependencyInjection
             var _container = new ContainerBuilder();
 
             _container.RegisterType<RegistrationDataPageViewModel>();
-          //_container.Register<BaseViewModel>();
+            _container.RegisterType<PlaceOrderViewModel>();
             _container.RegisterType<BottomtabbedpageViewModel>();
             _container.RegisterType<ProfileViewModel>();
             _container.RegisterType<ViewOrderViewModel>();
@@ -32,6 +32,8 @@ namespace BoogieApp.DependencyInjection
             _container.RegisterType<BaseViewModel>();
             _container.RegisterType<ShoppingCategoryViewModel>();
             _container.RegisterType<FavouriteShopViewModel>();
+
+
 
             _container.RegisterType<RequestProvider>().As<IRequestProvider>().SingleInstance();
             _container.RegisterType<LocationServices>().As<ILocationServices>().SingleInstance();

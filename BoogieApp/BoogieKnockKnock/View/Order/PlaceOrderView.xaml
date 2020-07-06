@@ -8,7 +8,7 @@
              xmlns:local="clr-namespace:BoogieApp.Images"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="30">
             <!--<StackLayout  BackgroundColor="#52C5FC" Padding="10">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Boogie Wallet Balance" TextColor="White" FontSize="17" FontFamily="RamarajaFont"/>
@@ -22,7 +22,7 @@
             <Label Text="How do you want to place your order in ***" HorizontalOptions="CenterAndExpand" FontFamily="RamarajaFont" FontSize="20"/>-->
 
 
-            <Grid>
+            <Grid VerticalOptions="CenterAndExpand" RowSpacing="70" ColumnSpacing="70">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>

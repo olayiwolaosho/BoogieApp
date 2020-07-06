@@ -47,8 +47,20 @@ namespace BoogieApp.BoogieFuelme.ViewModels
                 _visiblebutton = value;
                 RaisePropertyChanged(() => Visiblebutton);
             }
-        }
+        }  
         
+        bool _policy = false;
+        public bool Policy
+        {
+            get => _policy;
+            set
+            {
+                _policy = value;
+                RaisePropertyChanged(() => Policy);
+            }
+        }
+
+
         //The activity Indicator that activates when button is pressed
         bool _buttonActivity = false;
         public bool ButtonActivity
@@ -227,7 +239,15 @@ namespace BoogieApp.BoogieFuelme.ViewModels
                             {
                                 if (Usermobile.Length == 11)
                                 {
-                                    return true;
+                                    if (Policy)
+                                    {
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        await Application.Current.MainPage.DisplayAlert("Terms and conditions", "You have not agreed to our terms and conditions", "Ok");
+                                        return false;
+                                    }
                                 }
                                 else
                                 {

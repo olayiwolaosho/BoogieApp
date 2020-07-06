@@ -84,7 +84,7 @@
 
             <StackLayout Margin="20,20,20,0">
 
-                <Button BackgroundColor="White" Text="VERIFY" TextColor="#52C5FC" CornerRadius="10" FontAttributes="Bold" Command="{Binding Verify}"/>
+                <Button BackgroundColor="#91D8F7" Text="VERIFY" TextColor="#52C5FC" CornerRadius="10" FontAttributes="Bold" Command="{Binding Verify}"/>
 
                 <StackLayout x:Name="loadingact" IsVisible="False">
                     <ActivityIndicator IsVisible="True" IsRunning="True" IsEnabled="True"></ActivityIndicator>

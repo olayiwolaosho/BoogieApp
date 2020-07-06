@@ -29,59 +29,7 @@ namespace BoogieApp.BoogieKnockKnock.ViewModels
 
         public FavouriteShopViewModel(INavigationService navigationService) : base(navigationService)
         {
-           // favouriteShops = new ObservableCollection<FavouriteShopModel>()
-           //{
-           //    new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-           //    new FavouriteShopModel()
-           //    {
-           //        Title = "Grocery",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-           //     new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-           //    new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-                
-           //    new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },   
-           //    new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-                
-           //     new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-           //     new FavouriteShopModel()
-           //    {
-           //        Title = "Home Affairs Supermarket",
-           //        ImageUrl = "Grocery.jpg",
-
-           //    },
-           //};
+           
         }
 
         public ICommand NavigatetofavShop => new Command(async () =>

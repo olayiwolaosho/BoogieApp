@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.Order.PictureOrderView"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="10">
+                <Image x:Name="image"/>
+                <Button x:Name="takePhoto" Text="Take Photo"/>
+                <Button x:Name="pickPhoto" Text="Pick Photo"/>
+                <Editor Placeholder="Tell us Something about your Product"/>
+                <Button x:Name="SaveImage" Text="Send"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

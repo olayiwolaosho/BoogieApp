@@ -52,7 +52,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame Style="{StaticResource myframe}" Margin="15" BorderColor="#F6F6F6">
+                                <Frame Style="{StaticResource myframe}" Margin="10" BorderColor="#F6F6F6">
                                     <Expander>
                                         <Expander.Header>
                                             <Label Text="D'Prince Mini Market"

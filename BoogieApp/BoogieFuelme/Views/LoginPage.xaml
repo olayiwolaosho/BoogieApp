@@ -4,7 +4,8 @@
              x:Class="BoogieApp.Views.LoginPage"
              xmlns:local="clr-namespace:BoogieApp.Controls"
              xmlns:local1="clr-namespace:BoogieApp.Images"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             Padding="15">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -49,7 +50,7 @@
                 <Setter Property="HeightRequest" Value="55"/>
                 <Setter Property="Padding" Value="0,0,15,0"/>
                 <Setter Property="Margin" Value="15"/>
-                <Setter Property="BorderColor" Value="#666666"/>
+                <Setter Property="BorderColor" Value="#BABABA"/>
                 <Setter Property="CornerRadius" Value="7"/>
             </Style>
 
@@ -113,8 +114,8 @@
                    FontFamily="MyAwesomeCustomFont"
                    FontSize="17"/>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30" Margin="10">
-                <ImageButton BackgroundColor="Transparent" Command="{Binding loginwithfacebook}" Source="{local1:ImageResource BoogieApp.Images.facebook.png}" HorizontalOptions="Center" HeightRequest="70" WidthRequest="60"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="35" Margin="2">
+                <ImageButton BackgroundColor="Transparent" Command="{Binding loginwithfacebook}" Source="{local1:ImageResource BoogieApp.Images.facebook.png}" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50"/>
                 <Image Source="{local1:ImageResource BoogieApp.Images.twitter.png}" HorizontalOptions="Center" HeightRequest="70" WidthRequest="60"/>
                 <!--<Image Source="gPlus.png" HorizontalOptions="Center" HeightRequest="70" WidthRequest="50"/>-->
             </StackLayout>

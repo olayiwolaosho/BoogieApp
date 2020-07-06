@@ -16,7 +16,7 @@
             <converters:SecondOrderConverter x:Key="SecondOrderConverter" />
             <converters:OrderVisibilityConverter x:Key="OrderVisibilityConverter" />
             <converters:ProgressColorConverter x:Key="ProgressColorConverter"/>
-            <converters:ViewCellHeightConverter x:Key="ViewCellHeightConverter"/> 
+            <converters:ViewCellHeightConverter x:Key="ViewCellHeightConverter"/> +
 
             <Color x:Key="ordercolor">#666666</Color>
 
@@ -33,7 +33,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Order List" Style="{StaticResource DHeader}" FontSize="20"/>
-            <ListView ItemsSource="{Binding order}" SeparatorVisibility="None" Margin="15,0,10,15" HasUnevenRows="True" ItemSelected="ListView_ItemSelected">
+            <ListView  SeparatorVisibility="None" Margin="15,0,10,15" HasUnevenRows="True" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

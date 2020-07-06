@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewModels="clr-namespace:BoogieApp.BoogieFuelme.ViewModels"
              mc:Ignorable="d"
              x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.FacebookLogin"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
         <viewModels:FacebookViewModel/>
     </ContentPage.BindingContext>
@@ -14,7 +15,7 @@
         <StackLayout>
             <StackLayout x:Name="MainStackLayout"
                Padding="8,30">
-                <ActivityIndicator IsVisible="True" IsRunning="True" Color="LightGray"/>
+                <ActivityIndicator IsVisible="True" IsRunning="True" Color="LightGray" HorizontalOptions="Center" VerticalOptions="Center"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

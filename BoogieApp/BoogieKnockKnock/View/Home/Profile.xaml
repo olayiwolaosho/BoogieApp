@@ -15,7 +15,7 @@
             
             
             <Style TargetType="{x:Type Label}" x:Key="Header">
-                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="FontFamily" Value="{StaticResource JosefinSansSemiBold}"/>
@@ -30,14 +30,14 @@
             </Style>
             
             <Style TargetType="{x:Type Label}" x:Key="GridLabel">
-                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="FontSize" Value="15" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
             </Style> 
             
             <Style TargetType="{x:Type Label}" x:Key="Others">
-                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="FontSize" Value="15" />
                 <Setter Property="Padding" Value="10"/>
                 <Setter Property="FontFamily" Value="{StaticResource JosefinSansRegular}"/>
@@ -52,7 +52,7 @@
             
             <Style TargetType="{x:Type Button}" x:Key="Feedback">
                 <Setter Property="BackgroundColor" Value="White"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="BorderColor" Value="LightGray" />
                 <Setter Property="BorderWidth" Value="1"/>
                 <Setter Property="CornerRadius" Value="10"/>

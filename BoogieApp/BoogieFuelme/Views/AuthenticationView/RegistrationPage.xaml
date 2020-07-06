@@ -10,7 +10,7 @@
              x:Class="BoogieApp.BoogieFuelme.Views.AuthenticationView.RegistrationPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="White"
-            >
+            Padding="10">
     <!--<ContentPage.Content>
         <StackLayout Padding="40" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="400">
             <Entry Placeholder="Full Name*" WidthRequest="300" BackgroundColor="WhiteSmoke" Margin="110"/>
@@ -66,7 +66,7 @@
                 <Setter Property="HeightRequest" Value="55"/>
                 <Setter Property="Padding" Value="0,0,15,0"/>
                 <Setter Property="Margin" Value="15"/>
-                <Setter Property="BorderColor" Value="#666666"/>
+                <Setter Property="BorderColor" Value="#BABABA"/>
                 <Setter Property="CornerRadius" Value="7"/>
             </Style>
 
@@ -105,7 +105,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <StackLayout Padding="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsNotBusy}">
+                <StackLayout Padding="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsNotBusy}" >
                     <!--<ImageButton Source="{local1:ImageResource BoogieApp.Images.back.png}" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"/>-->
                     <Label Text="Sign up" HorizontalOptions="Center" FontSize="25" TextColor="#666666" FontFamily="RajdhaniSem"/>
                     <ImageButton Source="{local1:ImageResource BoogieApp.Images.Boogielogo2.png}" BackgroundColor="White" HorizontalOptions="Center" WidthRequest="170"/>
@@ -146,7 +146,7 @@
                         </Frame>
 
 
-                        <Frame BorderColor="#666666" Margin="17" Padding="4" CornerRadius="7">
+                        <Frame BorderColor="#BABABA" Margin="17" Padding="4" CornerRadius="7">
                             <StackLayout BackgroundColor="White" Orientation="Horizontal" Padding="13,-2" HeightRequest="50">
                                 <!--<Label Text="Address" Style="{StaticResource mylabel}"/>-->
                                 <Label Text="{Binding Useraddress}" Style="{StaticResource Addresslabel}"/>
@@ -158,7 +158,7 @@
                         </Frame>
 
 
-                        <Frame BorderColor="#666666" Margin="17" Padding="4" CornerRadius="7">
+                        <Frame BorderColor="#BABABA" Margin="17" Padding="4" CornerRadius="7">
                             <StackLayout BackgroundColor="White" Orientation="Horizontal" Padding="-5,0,13,0" HeightRequest="50">
                                 <!--<Label Text="Location" Style="{StaticResource mylabel}"/>-->
                                 <local:WhitePicker Title="Select a location" ItemsSource="{Binding MyLocations}" ItemDisplayBinding="{Binding LocationName}" SelectedItem="{Binding LocationSelected, Mode=TwoWay}"  Style="{StaticResource  mypicker}"/>
@@ -166,8 +166,11 @@
                             </StackLayout>
                         </Frame>
 
-
-                        <Label Text="By creating an account you agree to our terms of services and privacy policy" HorizontalTextAlignment="Center" TextColor="#666666" Margin="20" />
+                        <StackLayout Orientation="Horizontal" Padding="15" Spacing="-15">
+                            <CheckBox IsChecked="{Binding Policy}" Color="#91D8F7"/>
+                            <Label Text="By creating an account you agree to our terms of services and privacy policy" HorizontalTextAlignment="Center" TextColor="#666666" Margin="20" />
+                        </StackLayout>
+                        
 
                         <Grid Margin="70,20">
                             <Grid.RowDefinitions>

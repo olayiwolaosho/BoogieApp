@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local1="clr-namespace:BoogieApp.Images"
+             mc:Ignorable="d"
+             x:Class="BoogieApp.BoogieKnockKnock.View.Order.ListOrderView"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         >
+                <!--<StackLayout Orientation="Horizontal" Spacing="0">
+                    <ImageButton Source="iconmonstrarrow" Command="{Binding BackbuttonCommand}" BackgroundColor="Transparent" HeightRequest="60" WidthRequest="70"/>
+                    <ImageButton Source="iconmonstrrefresh.png" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"/>
+                    <SearchBar Placeholder="Search" TextColor="#336699" WidthRequest="300"
+                               HorizontalOptions="End" TextChanged="SearchBar_TextChanged"
+                               CancelButtonColor="red"/>
+                </StackLayout>-->
+                <ListView ItemsSource="{Binding GroupList}" 
+                      x:Name="Grouplistview"
+                      ItemSelected="Grouplistview_ItemSelected"
+                      HasUnevenRows="True">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout  Padding="0" Margin="5">
+                                    <StackLayout Margin="5" Orientation="Horizontal">
+                                        <StackLayout VerticalOptions="Center" Padding="15,0,0,0">
+                                            <Label Text="{Binding Name}"  FontSize="18" FontAttributes="Bold"
+                                               VerticalOptions="Center"  LineBreakMode="TailTruncation" TextColor="Black"/>
+                                            <Label Text="{Binding DateCreated,StringFormat='{0:dd,MMMM,yyyy}'}" LineBreakMode="TailTruncation" FontSize="16" 
+                                               VerticalOptions="Center" />
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="2"  HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <ImageButton BackgroundColor="Transparent" Clicked="ImageButton_Clicked"
+                         AbsoluteLayout.LayoutFlags="All" 
+                         AbsoluteLayout.LayoutBounds="0.96,1,.10,.10" Source="{local1:ImageResource BoogieApp.Images.add.png}"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
